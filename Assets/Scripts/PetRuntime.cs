@@ -1,0 +1,129 @@
+﻿using UnityEngine;
+using TMPro;
+
+public class PetRuntime : MonoBehaviour
+{
+    [Header("Refs")]
+    public SpriteRenderer petRenderer;
+    public TMP_Text nameText; 
+
+    [Header("Sprites")]
+    public Sprite dogSprite;
+    public Sprite catSprite;
+    public Sprite birdSprite;
+
+    [Header("FX/Audio (optional)")]
+    public AudioSource audioSource;
+    public AudioClip eatClip;
+    public AudioClip washClip;
+    public AudioClip happyClip;
+    public ParticleSystem heartFX;
+    public ParticleSystem sparkleFX; 
+
+    [Header("Core Stats (0~100)")]
+    [Range(0, 100)] public float hunger = 60f;
+    [Range(0, 100)] public float cleanliness = 60f; 
+    [Range(0, 100)] public float happiness = 60f;  
+
+    [Header("Natural Decay (per second)")]
+    public float hungerDecay = 6f; 
+    public float cleanlinessDecay = 4f;  
+    public float happinessDecay = 3f;   
+
+    [Header("Action Gains / Costs")]
+    public float feedGain = 25f;  
+    public float feedCleanCost = 5f;
+    public float overfeedPenalty = 15f;  
+
+    public float cleanGain = 30f;  
+    public float cleanHappyCost = 5f;  
+
+    public float playHappyGain = 22f;  
+    public float playHungerCost = 6f; 
+    public float playCleanCost = 6f;    
+
+    [Header("Overfeed Threshold")]
+    [Tooltip(">= 这个阈值视为已饱，再喂会扣开心")]
+    public float overfeedThreshold = 98f;
+
+    public float Hunger01 => Mathf.Clamp01(hunger / 100f);
+    public float Cleanliness01 => Mathf.Clamp01(cleanliness / 100f);
+    public float Happiness01 => Mathf.Clamp01(happiness / 100f);
+
+    public System.Action OnAnyStatZero; 
+
+    private void Start()
+    {
+        var cfg = SaveLoad.LoadOrDefault();
+
+        if (nameText) nameText.text = cfg.petName;
+
+        if (petRenderer != null)
+        {
+            switch (cfg.species)
+            {
+                case Species.Dog: petRenderer.sprite = dogSprite; break;
+                case Species.Cat: petRenderer.sprite = catSprite; break;
+                case Species.Bird: petRenderer.sprite = birdSprite; break;
+            }
+            petRenderer.color = cfg.color;
+        }
+    }
+
+    private void Update()
+    {
+        hunger = Mathf.Clamp(hunger - hungerDecay * Time.deltaTime, 0f, 100f);
+        cleanliness = Mathf.Clamp(cleanliness - cleanlinessDecay * Time.deltaTime, 0f, 100f);
+        happiness = Mathf.Clamp(happiness - happinessDecay * Time.deltaTime, 0f, 100f);
+
+        if (hunger <= 0f || cleanliness <= 0f || happiness <= 0f)
+        {
+            OnAnyStatZero?.Invoke();
+        }
+    }
+
+    public int Feed()
+    {
+        int scoreGain = 0;
+        if (hunger >= overfeedThreshold)
+        {
+            happiness = Mathf.Clamp(happiness - overfeedPenalty, 0f, 100f);
+            scoreGain = Mathf.RoundToInt(2 + 5 * Happiness01); 
+        }
+        else
+        {
+            hunger = Mathf.Clamp(hunger + feedGain, 0f, 100f);
+            cleanliness = Mathf.Clamp(cleanliness - feedCleanCost, 0f, 100f);
+            scoreGain = Mathf.RoundToInt(8 + 18 * Hunger01); 
+        }
+
+        if (audioSource && eatClip) audioSource.PlayOneShot(eatClip);
+        if (heartFX) heartFX.Play();
+        return scoreGain;
+    }
+
+    public int Clean()
+    {
+        cleanliness = Mathf.Clamp(cleanliness + cleanGain, 0f, 100f);
+        happiness = Mathf.Clamp(happiness - cleanHappyCost, 0f, 100f);
+
+        if (audioSource && washClip) audioSource.PlayOneShot(washClip);
+        if (sparkleFX) sparkleFX.Play();
+
+        int scoreGain = Mathf.RoundToInt(8 + 18 * Cleanliness01);
+        return scoreGain;
+    }
+
+    public int PlayWith()
+    {
+        happiness = Mathf.Clamp(happiness + playHappyGain, 0f, 100f);
+        hunger = Mathf.Clamp(hunger - playHungerCost, 0f, 100f);
+        cleanliness = Mathf.Clamp(cleanliness - playCleanCost, 0f, 100f);
+
+        if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
+        if (heartFX) heartFX.Play();
+
+        int scoreGain = Mathf.RoundToInt(10 + 20 * Happiness01);
+        return scoreGain;
+    }
+}
