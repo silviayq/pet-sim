@@ -38,8 +38,8 @@ public class GameManager : MonoBehaviour
         ended = false;
         if (resultPanel) resultPanel.SetActive(false);
 
-        if (hungerUI) { hungerUI.SetLabel("Hunger"); hungerUI.SetWords("Full", "Hungry", "Starving"); }
-        if (cleanUI) { cleanUI.SetLabel("Clean"); cleanUI.SetWords("Sparkly", "Messy", "Stinky"); }
+        //if (hungerUI) { hungerUI.SetLabel("Hunger"); hungerUI.SetWords("Full", "Hungry", "Starving"); }
+        //if (cleanUI) { cleanUI.SetLabel("Clean"); cleanUI.SetWords("Sparkly", "Messy", "Stinky"); }
         if (happyUI) { happyUI.SetLabel("Happy"); happyUI.SetWords("Joyful", "Okay", "Upset"); }
 
         if (btnFeed) btnFeed.onClick.AddListener(OnFeed);
