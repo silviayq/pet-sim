@@ -43,7 +43,7 @@ public class PetRuntime : MonoBehaviour
     public float playCleanCost = 6f;    
 
     [Header("Overfeed Threshold")]
-    [Tooltip(">= 这个阈值视为已饱，再喂会扣开心")]
+    [Tooltip(">= already full, if feed, -happy")]
     public float overfeedThreshold = 98f;
 
     public float Hunger01 => Mathf.Clamp01(hunger / 100f);
