@@ -5,12 +5,11 @@ public class PetRuntime : MonoBehaviour
 {
     [Header("Refs")]
     public SpriteRenderer petRenderer;
-    public TMP_Text nameText; 
+    public TMP_Text nameText;
 
     [Header("Sprites")]
-    public Sprite dogSprite;
-    public Sprite catSprite;
-    public Sprite birdSprite;
+    public Sprite chickenSprite;
+    public Sprite plantSprite;
 
     [Header("FX/Audio (optional)")]
     public AudioSource audioSource;
@@ -18,29 +17,29 @@ public class PetRuntime : MonoBehaviour
     public AudioClip washClip;
     public AudioClip happyClip;
     public ParticleSystem heartFX;
-    public ParticleSystem sparkleFX; 
+    public ParticleSystem sparkleFX;
 
     [Header("Core Stats (0~100)")]
     [Range(0, 100)] public float hunger = 60f;
-    [Range(0, 100)] public float cleanliness = 60f; 
-    [Range(0, 100)] public float happiness = 60f;  
+    [Range(0, 100)] public float cleanliness = 60f;
+    [Range(0, 100)] public float happiness = 60f;
 
     [Header("Natural Decay (per second)")]
-    public float hungerDecay = 6f; 
-    public float cleanlinessDecay = 4f;  
-    public float happinessDecay = 3f;   
+    public float hungerDecay = 6f;
+    public float cleanlinessDecay = 4f;
+    public float happinessDecay = 3f;
 
     [Header("Action Gains / Costs")]
-    public float feedGain = 25f;  
+    public float feedGain = 25f;
     public float feedCleanCost = 5f;
-    public float overfeedPenalty = 15f;  
+    public float overfeedPenalty = 15f;
 
-    public float cleanGain = 30f;  
-    public float cleanHappyCost = 5f;  
+    public float cleanGain = 30f;
+    public float cleanHappyCost = 5f;
 
-    public float playHappyGain = 22f;  
-    public float playHungerCost = 6f; 
-    public float playCleanCost = 6f;    
+    public float playHappyGain = 22f;
+    public float playHungerCost = 6f;
+    public float playCleanCost = 6f;
 
     [Header("Overfeed Threshold")]
     [Tooltip(">= already full, if feed, -happy")]
@@ -50,7 +49,7 @@ public class PetRuntime : MonoBehaviour
     public float Cleanliness01 => Mathf.Clamp01(cleanliness / 100f);
     public float Happiness01 => Mathf.Clamp01(happiness / 100f);
 
-    public System.Action OnAnyStatZero; 
+    public System.Action OnAnyStatZero;
 
     private void Start()
     {
@@ -62,9 +61,8 @@ public class PetRuntime : MonoBehaviour
         {
             switch (cfg.species)
             {
-                case Species.Dog: petRenderer.sprite = dogSprite; break;
-                case Species.Cat: petRenderer.sprite = catSprite; break;
-                case Species.Bird: petRenderer.sprite = birdSprite; break;
+                case Species.Chicken: petRenderer.sprite = chickenSprite; break;
+                case Species.Plant: petRenderer.sprite = plantSprite; break;
             }
             petRenderer.color = cfg.color;
         }
@@ -88,13 +86,13 @@ public class PetRuntime : MonoBehaviour
         if (hunger >= overfeedThreshold)
         {
             happiness = Mathf.Clamp(happiness - overfeedPenalty, 0f, 100f);
-            scoreGain = Mathf.RoundToInt(2 + 5 * Happiness01); 
+            scoreGain = Mathf.RoundToInt(2 + 5 * Happiness01);
         }
         else
         {
             hunger = Mathf.Clamp(hunger + feedGain, 0f, 100f);
             cleanliness = Mathf.Clamp(cleanliness - feedCleanCost, 0f, 100f);
-            scoreGain = Mathf.RoundToInt(8 + 18 * Hunger01); 
+            scoreGain = Mathf.RoundToInt(8 + 18 * Hunger01);
         }
 
         if (audioSource && eatClip) audioSource.PlayOneShot(eatClip);

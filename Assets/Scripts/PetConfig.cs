@@ -1,12 +1,12 @@
 using UnityEngine;
 using System;
 
-public enum Species { Dog = 0, Cat = 1, Bird = 2 }
+public enum Species { Chicken = 0, Plant = 1 }
 
 [Serializable]
 public class PetConfigData
 {
-    public Species species = Species.Dog;
+    public Species species = Species.Chicken;
     public string petName = "Buddy";
     public Color color = Color.white;
 }

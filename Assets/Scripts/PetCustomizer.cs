@@ -6,9 +6,9 @@ using TMPro;
 public class PetCustomizer : MonoBehaviour
 {
     [Header("UI")]
-    public TMP_InputField nameInput; 
-    public TMP_Dropdown speciesDropdown; 
-    public Image previewImage; 
+    public TMP_InputField nameInput;
+    public TMP_Dropdown speciesDropdown;
+    public Image previewImage;
 
     public Button btnColor1;
     public Button btnColor2;
@@ -16,16 +16,15 @@ public class PetCustomizer : MonoBehaviour
     public Button btnStart;
 
     [Header("Sprites")]
-    public Sprite dogSprite;
-    public Sprite catSprite;
-    public Sprite birdSprite;
+    public Sprite chickenSprite;
+    public Sprite plantSprite;
 
     private PetConfigData current = new PetConfigData();
 
     void Start()
     {
         speciesDropdown.ClearOptions();
-        speciesDropdown.AddOptions(new System.Collections.Generic.List<string> { "Dog", "Cat", "Bird" });
+        speciesDropdown.AddOptions(new System.Collections.Generic.List<string> { "Chicken", "Plant" });
         speciesDropdown.onValueChanged.AddListener(OnSpeciesChanged);
 
         btnColor1.onClick.AddListener(() => SetColor(ColorUtil.From255(255, 70, 70)));   // 红
@@ -36,6 +35,9 @@ public class PetCustomizer : MonoBehaviour
             nameInput.onValueChanged.AddListener((s) => current.petName = string.IsNullOrEmpty(s) ? "Buddy" : s);
 
         btnStart.onClick.AddListener(StartGame);
+
+        // 默认选项（0 = Chicken）
+        current.species = Species.Chicken;
 
         ApplySpecies();
         SetColor(Color.white);
@@ -51,18 +53,15 @@ public class PetCustomizer : MonoBehaviour
 
     void ApplySpecies()
     {
-        Sprite s = dogSprite;
+        Sprite s = chickenSprite;
         switch (current.species)
         {
-            case Species.Dog: s = dogSprite; break;
-            case Species.Cat: s = catSprite; break;
-            case Species.Bird: s = birdSprite; break;
+            case Species.Chicken: s = chickenSprite; break;
+            case Species.Plant: s = plantSprite; break;
         }
 
         if (previewImage != null)
-        {
             previewImage.sprite = s;
-        }
     }
 
     void SetColor(Color c)
@@ -74,9 +73,7 @@ public class PetCustomizer : MonoBehaviour
     void UpdatePreview()
     {
         if (previewImage != null)
-        {
             previewImage.color = current.color;
-        }
     }
 
     void StartGame()
