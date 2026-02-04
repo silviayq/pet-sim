@@ -30,16 +30,16 @@ public class PetRuntime : MonoBehaviour
     public float happinessDecay = 3f;
 
     [Header("Action Gains / Costs")]
-    public float feedGain = 25f;
-    public float feedCleanCost = 5f;
-    public float overfeedPenalty = 15f;
+    public float feedGain = 10f;
+    //public float feedCleanCost = 5f;
+    //public float overfeedPenalty = 15f;
 
-    public float cleanGain = 30f;
-    public float cleanHappyCost = 5f;
+    public float cleanGain = 10f;
+    //public float cleanHappyCost = 5f;
 
-    public float playHappyGain = 22f;
-    public float playHungerCost = 6f;
-    public float playCleanCost = 6f;
+    public float playHappyGain = 10f;
+    //public float playHungerCost = 6f;
+    //public float playCleanCost = 6f;
 
     [Header("Overfeed Threshold")]
     [Tooltip(">= already full, if feed, -happy")]
@@ -70,30 +70,33 @@ public class PetRuntime : MonoBehaviour
 
     private void Update()
     {
-        hunger = Mathf.Clamp(hunger - hungerDecay * Time.deltaTime, 0f, 100f);
-        cleanliness = Mathf.Clamp(cleanliness - cleanlinessDecay * Time.deltaTime, 0f, 100f);
-        happiness = Mathf.Clamp(happiness - happinessDecay * Time.deltaTime, 0f, 100f);
+        //hunger = Mathf.Clamp(hunger - hungerDecay * Time.deltaTime, 0f, 100f);
+        //cleanliness = Mathf.Clamp(cleanliness - cleanlinessDecay * Time.deltaTime, 0f, 100f);
+        //happiness = Mathf.Clamp(happiness - happinessDecay * Time.deltaTime, 0f, 100f);
 
-        if (hunger <= 0f || cleanliness <= 0f || happiness <= 0f)
-        {
-            OnAnyStatZero?.Invoke();
-        }
+        //if (hunger <= 0f || cleanliness <= 0f || happiness <= 0f)
+        //{
+        //    OnAnyStatZero?.Invoke();
+        //}
     }
 
     public int Feed()
     {
-        int scoreGain = 0;
-        if (hunger >= overfeedThreshold)
-        {
-            happiness = Mathf.Clamp(happiness - overfeedPenalty, 0f, 100f);
-            scoreGain = Mathf.RoundToInt(2 + 5 * Happiness01);
-        }
-        else
-        {
-            hunger = Mathf.Clamp(hunger + feedGain, 0f, 100f);
-            cleanliness = Mathf.Clamp(cleanliness - feedCleanCost, 0f, 100f);
-            scoreGain = Mathf.RoundToInt(8 + 18 * Hunger01);
-        }
+        //int scoreGain = 0;
+        //if (hunger >= overfeedThreshold)
+        //{
+        //    happiness = Mathf.Clamp(happiness - overfeedPenalty, 0f, 100f);
+        //    scoreGain = Mathf.RoundToInt(2 + 5 * Happiness01);
+        //}
+        //else
+        //{
+        //    hunger = Mathf.Clamp(hunger + feedGain, 0f, 100f);
+        //    //cleanliness = Mathf.Clamp(cleanliness - feedCleanCost, 0f, 100f);
+        //    scoreGain = Mathf.RoundToInt(8 + 18 * Hunger01);
+        //}
+
+        happiness = Mathf.Clamp(happiness + feedGain, 0f, 100f);
+        int scoreGain = Mathf.RoundToInt(Happiness01);
 
         if (audioSource && eatClip) audioSource.PlayOneShot(eatClip);
         if (heartFX) heartFX.Play();
@@ -102,26 +105,26 @@ public class PetRuntime : MonoBehaviour
 
     public int Clean()
     {
-        cleanliness = Mathf.Clamp(cleanliness + cleanGain, 0f, 100f);
-        happiness = Mathf.Clamp(happiness - cleanHappyCost, 0f, 100f);
+        happiness = Mathf.Clamp(happiness + cleanGain, 0f, 100f);
+        //happiness = Mathf.Clamp(happiness - cleanHappyCost, 0f, 100f);
 
         if (audioSource && washClip) audioSource.PlayOneShot(washClip);
         if (sparkleFX) sparkleFX.Play();
 
-        int scoreGain = Mathf.RoundToInt(8 + 18 * Cleanliness01);
+        int scoreGain = Mathf.RoundToInt(Happiness01);
         return scoreGain;
     }
 
     public int PlayWith()
     {
         happiness = Mathf.Clamp(happiness + playHappyGain, 0f, 100f);
-        hunger = Mathf.Clamp(hunger - playHungerCost, 0f, 100f);
-        cleanliness = Mathf.Clamp(cleanliness - playCleanCost, 0f, 100f);
+        //hunger = Mathf.Clamp(hunger - playHungerCost, 0f, 100f);
+        //cleanliness = Mathf.Clamp(cleanliness - playCleanCost, 0f, 100f);
 
         if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
         if (heartFX) heartFX.Play();
 
-        int scoreGain = Mathf.RoundToInt(10 + 20 * Happiness01);
+        int scoreGain = Mathf.RoundToInt(Happiness01);
         return scoreGain;
     }
 }

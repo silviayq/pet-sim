@@ -1357,7 +1357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &468093476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1908,7 +1908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &526350947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1944,7 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36254755e03b6b48a474f1fef6c1957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 628825809}
+  slider: {fileID: 1525825465}
   labelText: {fileID: 1203519523}
   valueText: {fileID: 133254633}
   stateText: {fileID: 1135165793}
@@ -2247,7 +2247,7 @@ RectTransform:
   m_Father: {fileID: 1049266777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2499,7 +2499,7 @@ RectTransform:
   m_Father: {fileID: 1356874102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2687,7 +2687,7 @@ RectTransform:
   m_Father: {fileID: 614985764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2762,7 +2762,7 @@ RectTransform:
   m_Father: {fileID: 477297343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2940,7 +2940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &846405833
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3195,7 +3195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1048476727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3975,7 +3975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1328738606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4011,7 +4011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36254755e03b6b48a474f1fef6c1957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1315365666}
+  slider: {fileID: 1525825465}
   labelText: {fileID: 42483898}
   valueText: {fileID: 295350487}
   stateText: {fileID: 996601388}
@@ -4808,9 +4808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   petRenderer: {fileID: 1894539766}
   nameText: {fileID: 156231500}
-  dogSprite: {fileID: 1480917699468073914, guid: 95a06ab6bb2a8cc479602f031a61ec50, type: 3}
-  catSprite: {fileID: 1075993247170539406, guid: 34e5ad1ead84c1842a342ffd24667676, type: 3}
-  birdSprite: {fileID: -5064401156898091283, guid: 5a65e1f1ddd19db4faf001d026deb003, type: 3}
+  chickenSprite: {fileID: 0}
+  plantSprite: {fileID: 0}
   audioSource: {fileID: 1894539769}
   eatClip: {fileID: 8300000, guid: 0b5647ced769ec1478fe84de8b739b25, type: 3}
   washClip: {fileID: 8300000, guid: 0b5647ced769ec1478fe84de8b739b25, type: 3}
@@ -4824,13 +4823,8 @@ MonoBehaviour:
   cleanlinessDecay: 4
   happinessDecay: 3
   feedGain: 20
-  feedCleanCost: 5
-  overfeedPenalty: 15
   cleanGain: 30
-  cleanHappyCost: 5
   playHappyGain: 22
-  playHungerCost: 6
-  playCleanCost: 6
   overfeedThreshold: 98
 --- !u!1 &1732497123
 GameObject:
