@@ -15,9 +15,9 @@ public class StatBar : MonoBehaviour
     public string label = "Stat"; 
 
     [Header("Thresholds (0~1)")]
-    [Tooltip(">= goodHigh 视为“良好”（绿）")]
+    [Tooltip(">= goodHigh aa“good”（green）")]
     public float goodHigh = 0.7f;
-    [Tooltip("< warnLow 视为“危险”（红）")]
+    [Tooltip("< warnLow as“danger”（red）")]
     public float warnLow = 0.3f;
 
     [Header("Colors")]
