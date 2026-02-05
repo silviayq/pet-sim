@@ -15,9 +15,9 @@ public class PetCustomizer : MonoBehaviour
     public Button btnColor3;
     public Button btnStart;
 
-    [Header("Sprites")]
-    public Sprite chickenSprite;
-    public Sprite plantSprite;
+    [Header("Preview Sprites (Stage 1)")]
+    public Sprite chicken1;
+    public Sprite plant1;
 
     private PetConfigData current = new PetConfigData();
 
@@ -27,16 +27,17 @@ public class PetCustomizer : MonoBehaviour
         speciesDropdown.AddOptions(new System.Collections.Generic.List<string> { "Chicken", "Plant" });
         speciesDropdown.onValueChanged.AddListener(OnSpeciesChanged);
 
-        btnColor1.onClick.AddListener(() => SetColor(ColorUtil.From255(255, 70, 70)));   // 红
-        btnColor2.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 120, 255)));  // 蓝
-        btnColor3.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 200, 120)));  // 绿
+        btnColor1.onClick.AddListener(() => SetColor(ColorUtil.From255(255, 70, 70)));
+        btnColor2.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 120, 255)));
+        btnColor3.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 200, 120)));
 
         if (nameInput != null)
             nameInput.onValueChanged.AddListener((s) => current.petName = string.IsNullOrEmpty(s) ? "Buddy" : s);
 
         btnStart.onClick.AddListener(StartGame);
 
-        // 默认选项（0 = Chicken）
+        // default:chicken stage 1
+        //I use the placemat for the images
         current.species = Species.Chicken;
 
         ApplySpecies();
@@ -53,15 +54,8 @@ public class PetCustomizer : MonoBehaviour
 
     void ApplySpecies()
     {
-        Sprite s = chickenSprite;
-        switch (current.species)
-        {
-            case Species.Chicken: s = chickenSprite; break;
-            case Species.Plant: s = plantSprite; break;
-        }
-
-        if (previewImage != null)
-            previewImage.sprite = s;
+        Sprite s = (current.species == Species.Chicken) ? chicken1 : plant1;
+        if (previewImage != null) previewImage.sprite = s;
     }
 
     void SetColor(Color c)
@@ -72,8 +66,7 @@ public class PetCustomizer : MonoBehaviour
 
     void UpdatePreview()
     {
-        if (previewImage != null)
-            previewImage.color = current.color;
+        if (previewImage != null) previewImage.color = current.color;
     }
 
     void StartGame()
