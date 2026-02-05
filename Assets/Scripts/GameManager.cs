@@ -65,6 +65,13 @@ public class GameManager : MonoBehaviour
     {
         if (ended) return;
 
+        //happiness>=100 win
+        if (pet != null && pet.happiness >= 100f)
+        {
+            EndGame(true);
+            return;
+        }
+
         if (useTimerWin)
         {
             timeLeft -= Time.deltaTime;
