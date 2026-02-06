@@ -23,6 +23,12 @@ public class PetRuntime : MonoBehaviour
     public Sprite thinkFeedSprite;
     public Sprite thinkCleanSprite;
     public Sprite thinkPlaySprite;
+    public Sprite thinkMusicSprite;
+
+    [Header("Action Texts")]
+    public TextMeshProUGUI feedBtnText;
+    public TextMeshProUGUI cleanBtnText;
+    public TextMeshProUGUI playBtnText;
 
     [Header("FX/Audio (optional)")]
     public AudioSource audioSource;
@@ -57,7 +63,7 @@ public class PetRuntime : MonoBehaviour
 
     public System.Action OnAnyStatZero;
 
-    public enum NeedType { None, Feed, Clean, Play }
+    public enum NeedType { None, Feed, Clean, Play, Music }
     public NeedType currentNeed = NeedType.None;
 
     private Species speciesCached;
@@ -87,15 +93,15 @@ public class PetRuntime : MonoBehaviour
     private int GetStageByHappiness()
     {
         float p = Happiness01;
-        if (p < 1f / 3f) return 1;
-        if (p < 2f / 3f) return 2;
+        if (p < 0.33f) return 1;
+        if (p < 0.66f) return 2;
         return 3;
     }
 
     private void ApplyStageSprite(bool force = false)
     {
         int stage = GetStageByHappiness();
-        if (!force && stage == currentStage) return;
+        if (!force && stage <= currentStage) return;
         currentStage = stage;
 
         if (petRenderer == null) return;
@@ -104,10 +110,17 @@ public class PetRuntime : MonoBehaviour
         if (speciesCached == Species.Chicken)
         {
             s = (stage == 1) ? chicken1 : (stage == 2) ? chicken2 : chicken3;
+            feedBtnText.text = "Feed";
+            cleanBtnText.text = "Wash";
+            playBtnText.text = "Pet";
+            //Change icon sprite for official
         }
         else
         {
             s = (stage == 1) ? plant1 : (stage == 2) ? plant2 : plant3;
+            feedBtnText.text = "Water";
+            cleanBtnText.text = "Trim";
+            playBtnText.text = "Tend";
         }
 
         if (s != null) petRenderer.sprite = s;
@@ -129,8 +142,14 @@ public class PetRuntime : MonoBehaviour
 
             if (currentNeed != NeedType.None) continue;
 
-            int r = Random.Range(0, 3);
-            currentNeed = (r == 0) ? NeedType.Feed : (r == 1) ? NeedType.Clean : NeedType.Play;
+            int r = Random.Range(0, 4);
+            switch (r)
+            {
+                case 0: currentNeed = NeedType.Feed; break;
+                case 1: currentNeed = NeedType.Clean; break;
+                case 2: currentNeed = NeedType.Play; break;
+                case 3: currentNeed = NeedType.Music; break;
+            }
 
             ShowThinking(currentNeed);
 
@@ -142,6 +161,13 @@ public class PetRuntime : MonoBehaviour
     private IEnumerator NeedTimeout()
     {
         yield return new WaitForSeconds(needTimeout);
+
+        if (currentNeed != NeedType.None && wrongNeedPenalty > 0f)
+        {
+            happiness = Mathf.Clamp(happiness - wrongNeedPenalty, 0f, 100f);
+            ApplyStageSprite();
+        }
+
         currentNeed = NeedType.None;
         HideThinking();
         timeoutCo = null;
@@ -157,6 +183,7 @@ public class PetRuntime : MonoBehaviour
             case NeedType.Feed: thinkingImage.sprite = thinkFeedSprite; break;
             case NeedType.Clean: thinkingImage.sprite = thinkCleanSprite; break;
             case NeedType.Play: thinkingImage.sprite = thinkPlaySprite; break;
+            case NeedType.Music: thinkingImage.sprite = thinkMusicSprite; break;
         }
     }
 
@@ -191,6 +218,16 @@ public class PetRuntime : MonoBehaviour
                 happiness = Mathf.Clamp(happiness - wrongNeedPenalty, 0f, 100f);
                 ApplyStageSprite();
             }
+
+            currentNeed = NeedType.None;
+            HideThinking();
+
+            if (timeoutCo != null)
+            {
+                StopCoroutine(timeoutCo);
+                timeoutCo = null;
+            }
+
             return 0;
         }
     }
@@ -219,6 +256,17 @@ public class PetRuntime : MonoBehaviour
     public int PlayWith()
     {
         int gain = TrySatisfyNeed(NeedType.Play);
+        if (gain > 0)
+        {
+            if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
+            if (heartFX) heartFX.Play();
+        }
+        return gain;
+    }
+
+    public int Music()
+    {
+        int gain = TrySatisfyNeed(NeedType.Music);
         if (gain > 0)
         {
             if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
