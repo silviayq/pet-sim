@@ -10,9 +10,9 @@ public class PetCustomizer : MonoBehaviour
     public TMP_Dropdown speciesDropdown;
     public Image previewImage;
 
-    public Button btnColor1;
-    public Button btnColor2;
-    public Button btnColor3;
+    //public Button btnColor1;
+    //public Button btnColor2;
+    //public Button btnColor3;
     public Button btnStart;
 
     [Header("Preview Sprites (Stage 1)")]
@@ -23,13 +23,13 @@ public class PetCustomizer : MonoBehaviour
 
     void Start()
     {
-        speciesDropdown.ClearOptions();
-        speciesDropdown.AddOptions(new System.Collections.Generic.List<string> { "Chicken", "Plant" });
-        speciesDropdown.onValueChanged.AddListener(OnSpeciesChanged);
+        //speciesDropdown.ClearOptions();
+        //speciesDropdown.AddOptions(new System.Collections.Generic.List<string> { "Chicken", "Plant" });
+        //speciesDropdown.onValueChanged.AddListener(OnSpeciesChanged);
 
-        btnColor1.onClick.AddListener(() => SetColor(ColorUtil.From255(255, 70, 70)));
-        btnColor2.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 120, 255)));
-        btnColor3.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 200, 120)));
+        //btnColor1.onClick.AddListener(() => SetColor(ColorUtil.From255(255, 70, 70)));
+        //btnColor2.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 120, 255)));
+        //btnColor3.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 200, 120)));
 
         if (nameInput != null)
             nameInput.onValueChanged.AddListener((s) => current.petName = string.IsNullOrEmpty(s) ? "Buddy" : s);
@@ -40,34 +40,46 @@ public class PetCustomizer : MonoBehaviour
         //I use the placemat for the images
         current.species = Species.Chicken;
 
-        ApplySpecies();
-        SetColor(Color.white);
-        UpdatePreview();
+        //ApplySpecies();
+        //SetColor(Color.white);
+        //UpdatePreview();
     }
 
-    void OnSpeciesChanged(int idx)
+    public void SelectedChicken()
     {
-        current.species = (Species)idx;
-        ApplySpecies();
-        UpdatePreview();
+        current.species = Species.Chicken;
+        Debug.Log("Selected CHICKEN");
     }
 
-    void ApplySpecies()
+    public void SelectedPlant()
     {
-        Sprite s = (current.species == Species.Chicken) ? chicken1 : plant1;
-        if (previewImage != null) previewImage.sprite = s;
+        current.species = Species.Plant;
+        Debug.Log("Selected PLANT");
     }
 
-    void SetColor(Color c)
-    {
-        current.color = c;
-        UpdatePreview();
-    }
+    //void OnSpeciesChanged(int idx)
+    //{
+    //    current.species = (Species)idx;
+    //    ApplySpecies();
+    //    UpdatePreview();
+    //}
 
-    void UpdatePreview()
-    {
-        if (previewImage != null) previewImage.color = current.color;
-    }
+    //void ApplySpecies()
+    //{
+    //    Sprite s = (current.species == Species.Chicken) ? chicken1 : plant1;
+    //    if (previewImage != null) previewImage.sprite = s;
+    //}
+
+    //void SetColor(Color c)
+    //{
+    //    current.color = c;
+    //    UpdatePreview();
+    //}
+
+    //void UpdatePreview()
+    //{
+    //    if (previewImage != null) previewImage.color = current.color;
+    //}
 
     void StartGame()
     {

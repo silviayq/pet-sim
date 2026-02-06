@@ -47,11 +47,11 @@ public class GameManager : MonoBehaviour
         if (btnPlay) btnPlay.onClick.AddListener(OnPlayWith);
 
         if (btnReplay) btnReplay.onClick.AddListener(() => {
-            SceneManager.LoadScene("PlayScene");
-        });
-        if (btnCustomize) btnCustomize.onClick.AddListener(() => {
             SceneManager.LoadScene("CustomizationScene");
         });
+        //if (btnCustomize) btnCustomize.onClick.AddListener(() => {
+        //    SceneManager.LoadScene("CustomizationScene");
+        //});
 
         if (pet != null)
         {
