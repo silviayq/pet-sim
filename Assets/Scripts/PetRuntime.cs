@@ -110,17 +110,17 @@ public class PetRuntime : MonoBehaviour
         if (speciesCached == Species.Chicken)
         {
             s = (stage == 1) ? chicken1 : (stage == 2) ? chicken2 : chicken3;
-            feedBtnText.text = "Feed";
-            cleanBtnText.text = "Wash";
-            playBtnText.text = "Pet";
+            //feedBtnText.text = "Feed";
+            //cleanBtnText.text = "Wash";
+            //playBtnText.text = "Pet";
             //Change icon sprite for official
         }
         else
         {
             s = (stage == 1) ? plant1 : (stage == 2) ? plant2 : plant3;
-            feedBtnText.text = "Water";
-            cleanBtnText.text = "Trim";
-            playBtnText.text = "Tend";
+            //feedBtnText.text = "Water";
+            //cleanBtnText.text = "Trim";
+            //playBtnText.text = "Tend";
         }
 
         if (s != null) petRenderer.sprite = s;

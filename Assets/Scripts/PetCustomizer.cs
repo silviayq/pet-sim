@@ -19,6 +19,8 @@ public class PetCustomizer : MonoBehaviour
     public Sprite chicken1;
     public Sprite plant1;
 
+    public Button btnChicken;
+
     private PetConfigData current = new PetConfigData();
 
     void Start()
@@ -35,6 +37,8 @@ public class PetCustomizer : MonoBehaviour
             nameInput.onValueChanged.AddListener((s) => current.petName = string.IsNullOrEmpty(s) ? "Buddy" : s);
 
         btnStart.onClick.AddListener(StartGame);
+
+        btnChicken.Select();
 
         // default:chicken stage 1
         //I use the placemat for the images
