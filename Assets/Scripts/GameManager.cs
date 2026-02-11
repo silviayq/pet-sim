@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public UnityEngine.UI.Button btnFeed;
     public UnityEngine.UI.Button btnClean;
     public UnityEngine.UI.Button btnPlay;
+    public UnityEngine.UI.Button btnMusic;
 
     public GameObject resultPanel;
     public TMP_Text resultTitleText; 
@@ -45,13 +46,14 @@ public class GameManager : MonoBehaviour
         if (btnFeed) btnFeed.onClick.AddListener(OnFeed);
         if (btnClean) btnClean.onClick.AddListener(OnClean);
         if (btnPlay) btnPlay.onClick.AddListener(OnPlayWith);
+        if (btnMusic) btnMusic.onClick.AddListener(OnMusic);
 
         if (btnReplay) btnReplay.onClick.AddListener(() => {
-            SceneManager.LoadScene("PlayScene");
-        });
-        if (btnCustomize) btnCustomize.onClick.AddListener(() => {
             SceneManager.LoadScene("CustomizationScene");
         });
+        //if (btnCustomize) btnCustomize.onClick.AddListener(() => {
+        //    SceneManager.LoadScene("CustomizationScene");
+        //});
 
         if (pet != null)
         {
@@ -118,6 +120,14 @@ public class GameManager : MonoBehaviour
     {
         if (ended || pet == null) return;
         int gain = pet.PlayWith();
+        score += gain;
+        UpdateUI();
+    }
+
+    void OnMusic()
+    {
+        if (ended || pet == null) return;
+        int gain = pet.Music();
         score += gain;
         UpdateUI();
     }
