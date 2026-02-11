@@ -5,12 +5,14 @@ public class VirtualKeyboard : MonoBehaviour
 {
     [Header("Refs")]
     public GameObject panel;
+    public GameObject keyboard;
     public TMP_InputField target;
 
     public void Open(TMP_InputField input)
     {
         target = input;
         if (panel != null) panel.SetActive(true);
+        if (keyboard != null) keyboard.SetActive(true);
 
         if (target != null)
         {
@@ -22,6 +24,7 @@ public class VirtualKeyboard : MonoBehaviour
     public void Close()
     {
         if (panel != null) panel.SetActive(false);
+        if (keyboard != null) keyboard.SetActive(false);
         if (target != null) target.DeactivateInputField();
         target = null;
     }
