@@ -10,6 +10,6 @@ public class ForcePetSorting : MonoBehaviour
         sr.sortingOrder = 999; 
         var c = sr.color; c.a = 1f; 
         sr.color = c;
-        transform.position = new Vector3(0, 0, 0); 
+        //transform.position = new Vector3(0, 0, 0); 
     }
 }

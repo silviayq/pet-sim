@@ -11,11 +11,11 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreText;
 
     public StatBar hungerUI;
-    public StatBar cleanUI;
+    //public StatBar cleanUI;
     public StatBar happyUI;
 
     public UnityEngine.UI.Button btnFeed;
-    public UnityEngine.UI.Button btnClean;
+    //public UnityEngine.UI.Button btnClean;
     public UnityEngine.UI.Button btnPlay;
     public UnityEngine.UI.Button btnMusic;
 
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         if (happyUI) { happyUI.SetLabel("Happy"); happyUI.SetWords("Joyful", "Okay", "Upset"); }
 
         if (btnFeed) btnFeed.onClick.AddListener(OnFeed);
-        if (btnClean) btnClean.onClick.AddListener(OnClean);
+        //if (btnClean) btnClean.onClick.AddListener(OnClean);
         if (btnPlay) btnPlay.onClick.AddListener(OnPlayWith);
         if (btnMusic) btnMusic.onClick.AddListener(OnMusic);
 
@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
         if (pet != null)
         {
             if (hungerUI) hungerUI.UpdateStat(pet.Hunger01, pet.hunger);
-            if (cleanUI) cleanUI.UpdateStat(pet.Cleanliness01, pet.cleanliness);
+            //if (cleanUI) cleanUI.UpdateStat(pet.Cleanliness01, pet.cleanliness);
             if (happyUI) happyUI.UpdateStat(pet.Happiness01, pet.happiness);
         }
     }
@@ -108,13 +108,13 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
-    void OnClean()
-    {
-        if (ended || pet == null) return;
-        int gain = pet.Clean();
-        score += gain;
-        UpdateUI();
-    }
+    //void OnClean()
+    //{
+    //    if (ended || pet == null) return;
+    //    int gain = pet.Clean();
+    //    score += gain;
+    //    UpdateUI();
+    //}
 
     void OnPlayWith()
     {
