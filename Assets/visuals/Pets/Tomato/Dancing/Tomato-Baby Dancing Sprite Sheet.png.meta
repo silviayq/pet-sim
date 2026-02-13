@@ -1,25 +1,55 @@
 fileFormatVersion: 2
-guid: 9bd8ee2afdcb3de469bd9ae38f303aa9
+guid: 21fa07ec0312501489582fea02fa4d5e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4040138546241983249
-    second: Chicken-Teen Sprite Sheet_0
+      213: 411916540896809691
+    second: Tomato-Baby Dancing Sprite Sheet_0
   - first:
-      213: 2202658188947503533
-    second: Chicken-Teen Sprite Sheet_1
+      213: 4614352738452231582
+    second: Tomato-Baby Dancing Sprite Sheet_1
   - first:
-      213: -3932831499652041468
-    second: Chicken-Teen Sprite Sheet_2
+      213: -8435884943298916540
+    second: Tomato-Baby Dancing Sprite Sheet_2
   - first:
-      213: 678363894776240773
-    second: Chicken-Teen Sprite Sheet_3
+      213: -1405004815928689166
+    second: Tomato-Baby Dancing Sprite Sheet_3
   - first:
-      213: -4631685421003473453
-    second: Chicken-Teen Sprite Sheet_4
+      213: -8435321459027283386
+    second: Tomato-Baby Dancing Sprite Sheet_4
   - first:
-      213: 1900177195389544709
-    second: Chicken-Teen Sprite Sheet_5
+      213: -4478207735668585110
+    second: Tomato-Baby Dancing Sprite Sheet_5
+  - first:
+      213: 8241307182581554442
+    second: Tomato-Baby Dancing Sprite Sheet_6
+  - first:
+      213: -5398721695600495856
+    second: Tomato-Baby Dancing Sprite Sheet_7
+  - first:
+      213: 5126404437237044680
+    second: Tomato-Baby Dancing Sprite Sheet_8
+  - first:
+      213: 8558172937588385982
+    second: Tomato-Baby Dancing Sprite Sheet_9
+  - first:
+      213: -7394204712114373431
+    second: Tomato-Baby Dancing Sprite Sheet_10
+  - first:
+      213: -8929413864077225828
+    second: Tomato-Baby Dancing Sprite Sheet_11
+  - first:
+      213: -7016448018870257477
+    second: Tomato-Baby Dancing Sprite Sheet_12
+  - first:
+      213: -211052620382397725
+    second: Tomato-Baby Dancing Sprite Sheet_13
+  - first:
+      213: 3243533629600950651
+    second: Tomato-Baby Dancing Sprite Sheet_14
+  - first:
+      213: 8900516452255587086
+    second: Tomato-Baby Dancing Sprite Sheet_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,133 +158,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chicken-Teen Sprite Sheet_0
+      name: Tomato-Baby Dancing Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 207
+        x: 0
         y: 0
-        width: 1536
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fec22e3d56b8ee7c0800000000000000
-      internalID: -4040138546241983249
+      spriteID: bd2134959eb67b500800000000000000
+      internalID: 411916540896809691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Teen Sprite Sheet_1
+      name: Tomato-Baby Dancing Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 2127
+        x: 1920
         y: 0
-        width: 1536
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da932d1e3f9619e10800000000000000
-      internalID: 2202658188947503533
+      spriteID: e95dbc32e59790040800000000000000
+      internalID: 4614352738452231582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Teen Sprite Sheet_2
+      name: Tomato-Baby Dancing Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 4047
+        x: 3840
         y: 0
-        width: 1536
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 405f5cd8696cb69c0800000000000000
-      internalID: -3932831499652041468
+      spriteID: 44f0a9cd657bdea80800000000000000
+      internalID: -8435884943298916540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Teen Sprite Sheet_3
+      name: Tomato-Baby Dancing Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 5967
+        x: 5760
         y: 0
-        width: 1536
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58a96904e580a6900800000000000000
-      internalID: 678363894776240773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chicken-Teen Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 7887
-        y: 0
-        width: 1536
-        height: 1920
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3dd7bb936a2f8bfb0800000000000000
-      internalID: -4631685421003473453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chicken-Teen Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 9807
-        y: 0
-        width: 1536
-        height: 1920
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 509ed757719ce5a10800000000000000
-      internalID: 1900177195389544709
+      spriteID: 2fd7bde509b608ce0800000000000000
+      internalID: -1405004815928689166
       vertices: []
       indices: 
       edges: []
@@ -263,7 +249,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d1f7936fb95f7bd4b92485ebffe369bf
+    spriteID: 2d97ae2ab7bedca41a84869104f5e55f
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +259,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chicken-Teen Sprite Sheet_0: -4040138546241983249
-      Chicken-Teen Sprite Sheet_1: 2202658188947503533
-      Chicken-Teen Sprite Sheet_2: -3932831499652041468
-      Chicken-Teen Sprite Sheet_3: 678363894776240773
-      Chicken-Teen Sprite Sheet_4: -4631685421003473453
-      Chicken-Teen Sprite Sheet_5: 1900177195389544709
+      Tomato-Baby Dancing Sprite Sheet_0: 411916540896809691
+      Tomato-Baby Dancing Sprite Sheet_1: 4614352738452231582
+      Tomato-Baby Dancing Sprite Sheet_2: -8435884943298916540
+      Tomato-Baby Dancing Sprite Sheet_3: -1405004815928689166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

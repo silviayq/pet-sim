@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 7347484479301e743aa0ba2070ae4865
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8501773036846838030
+    second: Chicken-Baby Idle Sprite Sheet_0
+  - first:
+      213: -1575515880017704256
+    second: Chicken-Baby Idle Sprite Sheet_1
+  - first:
+      213: -2323216892963123990
+    second: Chicken-Baby Idle Sprite Sheet_2
+  - first:
+      213: -4992965092974594866
+    second: Chicken-Baby Idle Sprite Sheet_3
+  - first:
+      213: 7695212616798196681
+    second: Chicken-Baby Idle Sprite Sheet_4
+  - first:
+      213: 3239488419403049876
+    second: Chicken-Baby Idle Sprite Sheet_5
+  - first:
+      213: 8870625979931577618
+    second: Chicken-Baby Idle Sprite Sheet_6
+  - first:
+      213: -1664624269220158462
+    second: Chicken-Baby Idle Sprite Sheet_7
+  - first:
+      213: 5734033907361711932
+    second: Chicken-Baby Idle Sprite Sheet_8
+  - first:
+      213: 7210967863531232884
+    second: Chicken-Baby Idle Sprite Sheet_9
+  - first:
+      213: -3918887858785279903
+    second: Chicken-Baby Idle Sprite Sheet_10
+  - first:
+      213: 3435082756851122360
+    second: Chicken-Baby Idle Sprite Sheet_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe00c1a772a30a80800000000000000
+      internalID: -8501773036846838030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cace8197a4a22ae0800000000000000
+      internalID: -1575515880017704256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec0fb67b8642cfd0800000000000000
+      internalID: -2323216892963123990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec4f259a3bc65bab0800000000000000
+      internalID: -4992965092974594866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c35c5f9a13eaca60800000000000000
+      internalID: 7695212616798196681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ba28ccd89f4fc20800000000000000
+      internalID: 3239488419403049876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d4c25845bca1b70800000000000000
+      internalID: 8870625979931577618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20463a4fb0116e8e0800000000000000
+      internalID: -1664624269220158462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3707526571639f40800000000000000
+      internalID: 5734033907361711932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e59880111821460800000000000000
+      internalID: 7210967863531232884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 160238e61405d99c0800000000000000
+      internalID: -3918887858785279903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b04e28419ddbaf20800000000000000
+      internalID: 3435082756851122360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e27551fa60fe0c40a27c70e6d6d5dbf
+      internalID: -1701219994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ed0cd38c962494c9f73113a729d334
+      internalID: -2055578092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Idle Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c4000fb79e4e54f938302e8db517a2
+      internalID: 1035688038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2203d493779cf5846b260c0e30b42221
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Chicken-Baby Idle Sprite Sheet_0: -8501773036846838030
+      Chicken-Baby Idle Sprite Sheet_1: -1575515880017704256
+      Chicken-Baby Idle Sprite Sheet_10: -3918887858785279903
+      Chicken-Baby Idle Sprite Sheet_11: 3435082756851122360
+      Chicken-Baby Idle Sprite Sheet_12: -1701219994
+      Chicken-Baby Idle Sprite Sheet_13: -2055578092
+      Chicken-Baby Idle Sprite Sheet_14: 1035688038
+      Chicken-Baby Idle Sprite Sheet_2: -2323216892963123990
+      Chicken-Baby Idle Sprite Sheet_3: -4992965092974594866
+      Chicken-Baby Idle Sprite Sheet_4: 7695212616798196681
+      Chicken-Baby Idle Sprite Sheet_5: 3239488419403049876
+      Chicken-Baby Idle Sprite Sheet_6: 8870625979931577618
+      Chicken-Baby Idle Sprite Sheet_7: -1664624269220158462
+      Chicken-Baby Idle Sprite Sheet_8: 5734033907361711932
+      Chicken-Baby Idle Sprite Sheet_9: 7210967863531232884
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

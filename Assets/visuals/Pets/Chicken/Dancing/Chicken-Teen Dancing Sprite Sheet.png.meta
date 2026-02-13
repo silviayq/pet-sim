@@ -1,0 +1,672 @@
+fileFormatVersion: 2
+guid: d5381c752e846924cadd15b5ee45c0ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6030002012751743637
+    second: Chicken-Teen Dancing Sprite Sheet_0
+  - first:
+      213: -4869979792630266945
+    second: Chicken-Teen Dancing Sprite Sheet_1
+  - first:
+      213: 7188547845406055178
+    second: Chicken-Teen Dancing Sprite Sheet_2
+  - first:
+      213: -8671330845677511068
+    second: Chicken-Teen Dancing Sprite Sheet_3
+  - first:
+      213: -1313929832193800582
+    second: Chicken-Teen Dancing Sprite Sheet_4
+  - first:
+      213: -4467107653448243745
+    second: Chicken-Teen Dancing Sprite Sheet_5
+  - first:
+      213: -4785758148240518641
+    second: Chicken-Teen Dancing Sprite Sheet_6
+  - first:
+      213: 8181698922691312919
+    second: Chicken-Teen Dancing Sprite Sheet_7
+  - first:
+      213: 440615343931079533
+    second: Chicken-Teen Dancing Sprite Sheet_8
+  - first:
+      213: 3456292426089239415
+    second: Chicken-Teen Dancing Sprite Sheet_9
+  - first:
+      213: -3566028837501293169
+    second: Chicken-Teen Dancing Sprite Sheet_10
+  - first:
+      213: -950287607954966725
+    second: Chicken-Teen Dancing Sprite Sheet_11
+  - first:
+      213: -1209259565321514393
+    second: Chicken-Teen Dancing Sprite Sheet_12
+  - first:
+      213: -863677785453347581
+    second: Chicken-Teen Dancing Sprite Sheet_13
+  - first:
+      213: -4532916555983851999
+    second: Chicken-Teen Dancing Sprite Sheet_14
+  - first:
+      213: 8433964584848852668
+    second: Chicken-Teen Dancing Sprite Sheet_15
+  - first:
+      213: 5180933657461068843
+    second: Chicken-Teen Dancing Sprite Sheet_16
+  - first:
+      213: 3336431469395828204
+    second: Chicken-Teen Dancing Sprite Sheet_17
+  - first:
+      213: -8149883252585415170
+    second: Chicken-Teen Dancing Sprite Sheet_18
+  - first:
+      213: -7517251257564140406
+    second: Chicken-Teen Dancing Sprite Sheet_19
+  - first:
+      213: -2158681805819909314
+    second: Chicken-Teen Dancing Sprite Sheet_20
+  - first:
+      213: -1293493827085461415
+    second: Chicken-Teen Dancing Sprite Sheet_21
+  - first:
+      213: 2940470552618855600
+    second: Chicken-Teen Dancing Sprite Sheet_22
+  - first:
+      213: 4140247393338131536
+    second: Chicken-Teen Dancing Sprite Sheet_23
+  - first:
+      213: 118806470685280038
+    second: Chicken-Teen Dancing Sprite Sheet_24
+  - first:
+      213: -491168646277762212
+    second: Chicken-Teen Dancing Sprite Sheet_25
+  - first:
+      213: 194382894894127737
+    second: Chicken-Teen Dancing Sprite Sheet_26
+  - first:
+      213: 1516736941378063968
+    second: Chicken-Teen Dancing Sprite Sheet_27
+  - first:
+      213: -5183307796794001462
+    second: Chicken-Teen Dancing Sprite Sheet_28
+  - first:
+      213: 6150450726127641642
+    second: Chicken-Teen Dancing Sprite Sheet_29
+  - first:
+      213: -1722655394841069076
+    second: Chicken-Teen Dancing Sprite Sheet_30
+  - first:
+      213: 3212543546479638040
+    second: Chicken-Teen Dancing Sprite Sheet_31
+  - first:
+      213: -4080715137642050481
+    second: Chicken-Teen Dancing Sprite Sheet_32
+  - first:
+      213: -2703225406028532054
+    second: Chicken-Teen Dancing Sprite Sheet_33
+  - first:
+      213: 4446454369883298135
+    second: Chicken-Teen Dancing Sprite Sheet_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5760
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65ba032e11215ca0800000000000000
+      internalID: -6030002012751743637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5760
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb341fc4e2b5a6cb0800000000000000
+      internalID: -4869979792630266945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5760
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0bd358cd2ad2c360800000000000000
+      internalID: 7188547845406055178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 5760
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e118dd98e39a780800000000000000
+      internalID: -8671330845677511068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 5760
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76cc4477cbf3cde0800000000000000
+      internalID: -1313929832193800582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5e9c6c145a102c0800000000000000
+      internalID: -4467107653448243745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f025139f152959db0800000000000000
+      internalID: -4785758148240518641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d363a52db3b8170800000000000000
+      internalID: 8181698922691312919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b399122516d1600800000000000000
+      internalID: 440615343931079533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7731ce836a737ff20800000000000000
+      internalID: 3456292426089239415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8dafe97aabe28ec0800000000000000
+      internalID: -3566028837501293169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3773659476efc2f0800000000000000
+      internalID: -950287607954966725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76294cf05d8d73fe0800000000000000
+      internalID: -1209259565321514393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d38ad41a99304f0800000000000000
+      internalID: -863677785453347581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e6814a868d711c0800000000000000
+      internalID: -4532916555983851999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb60428da167b0570800000000000000
+      internalID: 8433964584848852668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2415d136bf56e740800000000000000
+      internalID: 5180933657461068843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedd5c68eb26d4e20800000000000000
+      internalID: 3336431469395828204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Teen Dancing Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdbdb89c5cc5ee80800000000000000
+      internalID: -8149883252585415170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0464869b624c62146bdbb8171151c50d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Chicken-Teen Dancing Sprite Sheet_0: -6030002012751743637
+      Chicken-Teen Dancing Sprite Sheet_1: -4869979792630266945
+      Chicken-Teen Dancing Sprite Sheet_10: -3566028837501293169
+      Chicken-Teen Dancing Sprite Sheet_11: -950287607954966725
+      Chicken-Teen Dancing Sprite Sheet_12: -1209259565321514393
+      Chicken-Teen Dancing Sprite Sheet_13: -863677785453347581
+      Chicken-Teen Dancing Sprite Sheet_14: -4532916555983851999
+      Chicken-Teen Dancing Sprite Sheet_15: 8433964584848852668
+      Chicken-Teen Dancing Sprite Sheet_16: 5180933657461068843
+      Chicken-Teen Dancing Sprite Sheet_17: 3336431469395828204
+      Chicken-Teen Dancing Sprite Sheet_18: -8149883252585415170
+      Chicken-Teen Dancing Sprite Sheet_2: 7188547845406055178
+      Chicken-Teen Dancing Sprite Sheet_3: -8671330845677511068
+      Chicken-Teen Dancing Sprite Sheet_4: -1313929832193800582
+      Chicken-Teen Dancing Sprite Sheet_5: -4467107653448243745
+      Chicken-Teen Dancing Sprite Sheet_6: -4785758148240518641
+      Chicken-Teen Dancing Sprite Sheet_7: 8181698922691312919
+      Chicken-Teen Dancing Sprite Sheet_8: 440615343931079533
+      Chicken-Teen Dancing Sprite Sheet_9: 3456292426089239415
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

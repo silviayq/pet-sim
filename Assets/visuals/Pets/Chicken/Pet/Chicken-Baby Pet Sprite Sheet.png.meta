@@ -1,0 +1,568 @@
+fileFormatVersion: 2
+guid: df1d47b01b4811c4888d882910e64cf6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3093645844701457738
+    second: Chicken-Baby Pet Sprite Sheet_0
+  - first:
+      213: -997826268931715141
+    second: Chicken-Baby Pet Sprite Sheet_1
+  - first:
+      213: 7473343395221510419
+    second: Chicken-Baby Pet Sprite Sheet_2
+  - first:
+      213: 5317559325582520685
+    second: Chicken-Baby Pet Sprite Sheet_3
+  - first:
+      213: 3275587336286666529
+    second: Chicken-Baby Pet Sprite Sheet_4
+  - first:
+      213: -4179270632652361976
+    second: Chicken-Baby Pet Sprite Sheet_5
+  - first:
+      213: -4218236151294006315
+    second: Chicken-Baby Pet Sprite Sheet_6
+  - first:
+      213: 8701919005557336952
+    second: Chicken-Baby Pet Sprite Sheet_7
+  - first:
+      213: -8451743990372986774
+    second: Chicken-Baby Pet Sprite Sheet_8
+  - first:
+      213: 5810585429697830024
+    second: Chicken-Baby Pet Sprite Sheet_9
+  - first:
+      213: 3305467962390762863
+    second: Chicken-Baby Pet Sprite Sheet_10
+  - first:
+      213: 1451756742073447999
+    second: Chicken-Baby Pet Sprite Sheet_11
+  - first:
+      213: 2500617978615361619
+    second: Chicken-Baby Pet Sprite Sheet_12
+  - first:
+      213: -4453625582266810753
+    second: Chicken-Baby Pet Sprite Sheet_13
+  - first:
+      213: 8943082684773700908
+    second: Chicken-Baby Pet Sprite Sheet_14
+  - first:
+      213: 726577205187002988
+    second: Chicken-Baby Pet Sprite Sheet_15
+  - first:
+      213: -83822557380257379
+    second: Chicken-Baby Pet Sprite Sheet_16
+  - first:
+      213: 3669017677344307996
+    second: Chicken-Baby Pet Sprite Sheet_17
+  - first:
+      213: -1433264528982398921
+    second: Chicken-Baby Pet Sprite Sheet_18
+  - first:
+      213: -285348218425039117
+    second: Chicken-Baby Pet Sprite Sheet_19
+  - first:
+      213: 3730901740754298470
+    second: Chicken-Baby Pet Sprite Sheet_20
+  - first:
+      213: -6291010631636091805
+    second: Chicken-Baby Pet Sprite Sheet_21
+  - first:
+      213: -7121149389053894844
+    second: Chicken-Baby Pet Sprite Sheet_22
+  - first:
+      213: -1320388771415756753
+    second: Chicken-Baby Pet Sprite Sheet_23
+  - first:
+      213: -89213721115331889
+    second: Chicken-Baby Pet Sprite Sheet_24
+  - first:
+      213: -2826435056938441641
+    second: Chicken-Baby Pet Sprite Sheet_25
+  - first:
+      213: 5163443439511418618
+    second: Chicken-Baby Pet Sprite Sheet_26
+  - first:
+      213: 3024049494769439191
+    second: Chicken-Baby Pet Sprite Sheet_27
+  - first:
+      213: -8329447759416172593
+    second: Chicken-Baby Pet Sprite Sheet_28
+  - first:
+      213: -2630291436923965566
+    second: Chicken-Baby Pet Sprite Sheet_29
+  - first:
+      213: 1154432538291922578
+    second: Chicken-Baby Pet Sprite Sheet_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d2b424186deea20800000000000000
+      internalID: 3093645844701457738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf85cc8b420722f0800000000000000
+      internalID: -997826268931715141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31990b4f836a6b760800000000000000
+      internalID: 7473343395221510419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6179617804cbc940800000000000000
+      internalID: 5317559325582520685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3840
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f722ad359357d20800000000000000
+      internalID: 3275587336286666529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80fa888908f3006c0800000000000000
+      internalID: -4179270632652361976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dbe86fc190d575c0800000000000000
+      internalID: -4218236151294006315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b27761b3d63c870800000000000000
+      internalID: 8701919005557336952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a609649be9f55ba80800000000000000
+      internalID: -8451743990372986774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1920
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c133a99a853a050800000000000000
+      internalID: 5810585429697830024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f655cb249916fdd20800000000000000
+      internalID: 3305467962390762863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36f09fa01da52410800000000000000
+      internalID: 1451756742073447999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350f25e7dcaf3b220800000000000000
+      internalID: 2500617978615361619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ef466112b8132c0800000000000000
+      internalID: -4453625582266810753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Pet Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2512eeb1563c1c70800000000000000
+      internalID: 8943082684773700908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a6b954e05496e3b43b7e0add628d66b6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Chicken-Baby Pet Sprite Sheet_0: 3093645844701457738
+      Chicken-Baby Pet Sprite Sheet_1: -997826268931715141
+      Chicken-Baby Pet Sprite Sheet_10: 3305467962390762863
+      Chicken-Baby Pet Sprite Sheet_11: 1451756742073447999
+      Chicken-Baby Pet Sprite Sheet_12: 2500617978615361619
+      Chicken-Baby Pet Sprite Sheet_13: -4453625582266810753
+      Chicken-Baby Pet Sprite Sheet_14: 8943082684773700908
+      Chicken-Baby Pet Sprite Sheet_2: 7473343395221510419
+      Chicken-Baby Pet Sprite Sheet_3: 5317559325582520685
+      Chicken-Baby Pet Sprite Sheet_4: 3275587336286666529
+      Chicken-Baby Pet Sprite Sheet_5: -4179270632652361976
+      Chicken-Baby Pet Sprite Sheet_6: -4218236151294006315
+      Chicken-Baby Pet Sprite Sheet_7: 8701919005557336952
+      Chicken-Baby Pet Sprite Sheet_8: -8451743990372986774
+      Chicken-Baby Pet Sprite Sheet_9: 5810585429697830024
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
