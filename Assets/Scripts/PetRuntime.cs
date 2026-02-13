@@ -21,15 +21,25 @@ public class PetRuntime : MonoBehaviour
     //public Sprite plant2;
     //public Sprite plant3;
 
+    public GameObject farmBackground;
+    public GameObject gardenBackground;
+
+    public Image feedImage;
+    public Sprite foodSprite;
+    public Sprite waterSprite;
+
     public GameObject chickenObject;
     public GameObject plantObject;
 
     public Animator chickenAnimator;
     public Animator plantAnimator;
+    private Animator animator;
 
     [Header("Thinking UI (Image)")]
     public Image thinkingImage;
-    public Sprite thinkFeedSprite;
+    public Sprite thinkFoodSprite;
+    public Sprite thinkWaterSprite;
+    private Sprite thinkFeedSprite;
     //public Sprite thinkCleanSprite;
     public Sprite thinkPlaySprite;
     public Sprite thinkMusicSprite;
@@ -85,6 +95,9 @@ public class PetRuntime : MonoBehaviour
 
     private void Start()
     {
+        farmBackground.SetActive(false);
+        gardenBackground.SetActive(false);
+
         chickenObject.SetActive(false);
         plantObject.SetActive(false);
 
@@ -125,18 +138,22 @@ public class PetRuntime : MonoBehaviour
         //Sprite s = null;
         if (speciesCached == Species.Chicken)
         {
+            farmBackground.SetActive(true);
             chickenObject.SetActive(true);
+            animator = chickenAnimator;
 
-            if (stage == 2)
-            {
-                chickenAnimator.SetTrigger("Grow1");
-            }
-            else if (stage == 3)
-            {
-                chickenAnimator.SetTrigger("Grow2");
-            }
+            //if (stage == 2)
+            //{
+            //    chickenAnimator.SetBool("Grow1", true);
+            //}
+            //else if (stage == 3)
+            //{
+            //    chickenAnimator.SetBool("Grow2", true);
+            //}
 
             audioSource = chickenAudioSource;
+            feedImage.sprite = foodSprite;
+            thinkFeedSprite = thinkFoodSprite;
 
             //s = (stage == 1) ? chicken1 : (stage == 2) ? chicken2 : chicken3;
             //feedBtnText.text = "Feed";
@@ -146,23 +163,36 @@ public class PetRuntime : MonoBehaviour
         }
         else
         {
+            gardenBackground.SetActive(true);
             plantObject.SetActive(true);
+            animator = plantAnimator;
 
-            if (stage == 2)
-            {
-                plantAnimator.SetTrigger("Grow1");
-            }
-            else if (stage == 3)
-            {
-                plantAnimator.SetTrigger("Grow2");
-            }
+            //if (stage == 2)
+            //{
+            //    plantAnimator.SetTrigger("Grow1");
+            //}
+            //else if (stage == 3)
+            //{
+            //    plantAnimator.SetTrigger("Grow2");
+            //}
 
             audioSource = plantAudioSource;
+            feedImage.sprite = waterSprite;
+            thinkFeedSprite = thinkWaterSprite;
 
             //s = (stage == 1) ? plant1 : (stage == 2) ? plant2 : plant3;
             //feedBtnText.text = "Water";
             //cleanBtnText.text = "Trim";
             //playBtnText.text = "Tend";
+        }
+
+        if (stage == 2)
+        {
+            animator.SetBool("Grow1", true);
+        }
+        else if (stage == 3)
+        {
+            animator.SetBool("Grow2", true);
         }
 
         //if (s != null) petRenderer.sprite = s;
@@ -274,11 +304,12 @@ public class PetRuntime : MonoBehaviour
     }
     public int Feed()
     {
+        animator.SetTrigger("Feed");
         int gain = TrySatisfyNeed(NeedType.Feed);
         if (gain > 0)
         {
             if (audioSource && eatClip) audioSource.PlayOneShot(eatClip);
-            if (heartFX) heartFX.Play();
+            //if (heartFX) heartFX.Play();
         }
         return gain;
     }
@@ -296,6 +327,7 @@ public class PetRuntime : MonoBehaviour
 
     public int PlayWith()
     {
+        animator.SetTrigger("Pet");
         int gain = TrySatisfyNeed(NeedType.Play);
         if (gain > 0)
         {
@@ -307,6 +339,7 @@ public class PetRuntime : MonoBehaviour
 
     public int Music()
     {
+        animator.SetTrigger("Dancing");
         int gain = TrySatisfyNeed(NeedType.Music);
         if (gain > 0)
         {

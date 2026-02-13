@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 8c0634387bb23fa43994eee25b5606f7
+guid: 0089ca77e6113a446b58c2eea3f09f51
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -824776062869307009
-    second: Chicken-Adult Sprite Sheet_0
+      213: -2144398421610736951
+    second: Tomato-Baby Trim Sprite Sheet_0
   - first:
-      213: -232567596011100137
-    second: Chicken-Adult Sprite Sheet_1
+      213: 8715688366484336690
+    second: Tomato-Baby Trim Sprite Sheet_1
   - first:
-      213: 4696134385248556247
-    second: Chicken-Adult Sprite Sheet_2
+      213: 3070535563663537836
+    second: Tomato-Baby Trim Sprite Sheet_2
+  - first:
+      213: 6522637163782710509
+    second: Tomato-Baby Trim Sprite Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,67 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chicken-Adult Sprite Sheet_0
+      name: Tomato-Baby Trim Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 147
+        x: 0
         y: 0
-        width: 1716
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f710e696a8ecd84f0800000000000000
-      internalID: -824776062869307009
+      spriteID: 9c2dbfe3ff09d32e0800000000000000
+      internalID: -2144398421610736951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Adult Sprite Sheet_1
+      name: Tomato-Baby Trim Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 2067
+        x: 1920
         y: 0
-        width: 1716
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 718ed7de001c5ccf0800000000000000
-      internalID: -232567596011100137
+      spriteID: 230bd41446854f870800000000000000
+      internalID: 8715688366484336690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Adult Sprite Sheet_2
+      name: Tomato-Baby Trim Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 4017
+        x: 3840
         y: 0
-        width: 1716
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d4dc3a97550c2140800000000000000
-      internalID: 4696134385248556247
+      spriteID: ca67e56a3dbbc9a20800000000000000
+      internalID: 3070535563663537836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato-Baby Trim Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4a70a21ff058a50800000000000000
+      internalID: 6522637163782710509
       vertices: []
       indices: 
       edges: []
@@ -188,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b1b22f4e5c44f234992ba642e5302a4b
+    spriteID: 7003da356046a4648b8ddfb8106166f9
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chicken-Adult Sprite Sheet_0: -824776062869307009
-      Chicken-Adult Sprite Sheet_1: -232567596011100137
-      Chicken-Adult Sprite Sheet_2: 4696134385248556247
+      Tomato-Baby Trim Sprite Sheet_0: -2144398421610736951
+      Tomato-Baby Trim Sprite Sheet_1: 8715688366484336690
+      Tomato-Baby Trim Sprite Sheet_2: 3070535563663537836
+      Tomato-Baby Trim Sprite Sheet_3: 6522637163782710509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

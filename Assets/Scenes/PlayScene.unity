@@ -955,6 +955,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219d191861d619f45b435da6c40d2c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &196303854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196303855}
+  - component: {fileID: 196303857}
+  - component: {fileID: 196303856}
+  m_Layer: 5
+  m_Name: Garden Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &196303855
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196303854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.206575, y: 1.206575, z: 1.206575}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1900152144}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -1.4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &196303856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196303854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6616373, g: 1, b: 0.63207537, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2413806693520163455, guid: 5b6f5c1ccd103924c918a118c4ab8ec4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &196303857
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196303854}
+  m_CullTransparentMesh: 1
 --- !u!1 &250728159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,7 +1654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &431824473
 Animator:
   serializedVersion: 7
@@ -1873,8 +1948,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.35, z: 0}
-  m_LocalScale: {x: 0.22031333, y: 0.22031333, z: 0.22031333}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: -0.2203133, y: 0.22031333, z: 0.22031333}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 183747646}
   - {fileID: 442893372}
@@ -3777,7 +3852,7 @@ GameObject:
   - component: {fileID: 909946973}
   - component: {fileID: 909946972}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Farm Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3792,7 +3867,7 @@ RectTransform:
   m_GameObject: {fileID: 909946970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2065746, y: 1.2065746, z: 1.2065746}
+  m_LocalScale: {x: 1.206575, y: 1.206575, z: 1.206575}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1900152144}
@@ -6243,12 +6318,18 @@ MonoBehaviour:
   chickenName: {fileID: 156231500}
   plantName: {fileID: 293115322}
   nameText: {fileID: 156231500}
+  farmBackground: {fileID: 909946970}
+  gardenBackground: {fileID: 196303854}
+  feedImage: {fileID: 1025292110}
+  foodSprite: {fileID: 3920547696042853087, guid: fbacc85dda46b3144ad169bbd14e86fc, type: 3}
+  waterSprite: {fileID: 2187973797242420012, guid: 49b0896278789f646a20e0f4d69c259a, type: 3}
   chickenObject: {fileID: 1894539765}
   plantObject: {fileID: 431824472}
   chickenAnimator: {fileID: 1894539771}
   plantAnimator: {fileID: 431824473}
   thinkingImage: {fileID: 1106300720}
-  thinkFeedSprite: {fileID: 2187973797242420012, guid: 49b0896278789f646a20e0f4d69c259a, type: 3}
+  thinkFoodSprite: {fileID: 3920547696042853087, guid: fbacc85dda46b3144ad169bbd14e86fc, type: 3}
+  thinkWaterSprite: {fileID: 2187973797242420012, guid: 49b0896278789f646a20e0f4d69c259a, type: 3}
   thinkPlaySprite: {fileID: 21300000, guid: ad0c8d4d464117f4ab6acc8b812fc19c, type: 3}
   thinkMusicSprite: {fileID: 21300000, guid: fc8d0c2e6f7928445bdb8ffdddce3dba, type: 3}
   feedBtnText: {fileID: 1389270743}
@@ -6262,7 +6343,7 @@ MonoBehaviour:
   sparkleFX: {fileID: 573105782}
   hunger: 60
   happiness: 0
-  needIntervalRange: {x: 3, y: 5}
+  needIntervalRange: {x: 4, y: 6}
   needTimeout: 3
   correctNeedHappinessGain: 10
   wrongNeedPenalty: 10
@@ -6792,7 +6873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1894539766
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6837,12 +6918,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 4300454369567215114, guid: 7347484479301e743aa0ba2070ae4865, type: 3}
+  m_Sprite: {fileID: -8501773036846838030, guid: 7347484479301e743aa0ba2070ae4865, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.12, y: 1.62}
+  m_Size: {x: 19.199999, y: 19.203125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6858,7 +6939,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 0.13724466, y: 0.13724466, z: 0.13724466}
+  m_LocalScale: {x: -0.1372447, y: 0.13724466, z: 0.13724466}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 573105780}
@@ -7127,6 +7208,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 909946971}
+  - {fileID: 196303855}
   m_Father: {fileID: 7870042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8194,7 +8276,7 @@ Transform:
   m_GameObject: {fileID: 2112973015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.4, y: -7.9, z: 0}
+  m_LocalPosition: {x: -8.2, y: -8.7, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []

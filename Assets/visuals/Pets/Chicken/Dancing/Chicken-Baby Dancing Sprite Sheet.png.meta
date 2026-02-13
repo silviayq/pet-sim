@@ -1,43 +1,100 @@
 fileFormatVersion: 2
-guid: 7347484479301e743aa0ba2070ae4865
+guid: a6b521ad047cf8f45bcae2f5c6628196
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4300454369567215114
-    second: Chicken-Baby Sprite Sheet_0
+      213: 3044394967565597899
+    second: Chicken-Baby Dancing Sprite Sheet_0
   - first:
-      213: -4879694224343484311
-    second: Chicken-Baby Sprite Sheet_1
+      213: -9124369068891355236
+    second: Chicken-Baby Dancing Sprite Sheet_1
   - first:
-      213: 2753759959653911192
-    second: Chicken-Baby Sprite Sheet_2
+      213: -9021304271904470039
+    second: Chicken-Baby Dancing Sprite Sheet_2
   - first:
-      213: -8793278838972245134
-    second: Chicken-Baby Sprite Sheet_3
+      213: -8590902650649571203
+    second: Chicken-Baby Dancing Sprite Sheet_3
   - first:
-      213: -4421310585537991566
-    second: Chicken-Baby Sprite Sheet_4
+      213: -4278944023144341511
+    second: Chicken-Baby Dancing Sprite Sheet_4
   - first:
-      213: -4544666529075106398
-    second: Chicken-Baby Sprite Sheet_5
+      213: -5327212665528527132
+    second: Chicken-Baby Dancing Sprite Sheet_5
   - first:
-      213: -4890264834544232757
-    second: Chicken-Baby Sprite Sheet_6
+      213: 574422077438888550
+    second: Chicken-Baby Dancing Sprite Sheet_6
   - first:
-      213: -1270828199663158179
-    second: Chicken-Baby Sprite Sheet_7
+      213: 7243789094643319913
+    second: Chicken-Baby Dancing Sprite Sheet_7
   - first:
-      213: 497746734033699425
-    second: Chicken-Baby Sprite Sheet_8
+      213: 3900270380671595225
+    second: Chicken-Baby Dancing Sprite Sheet_8
   - first:
-      213: 7419213681876212687
-    second: Chicken-Baby Sprite Sheet_9
+      213: -5370501605138373475
+    second: Chicken-Baby Dancing Sprite Sheet_9
   - first:
-      213: 7195903005259859555
-    second: Chicken-Baby Sprite Sheet_10
+      213: -2312544192936122935
+    second: Chicken-Baby Dancing Sprite Sheet_10
   - first:
-      213: 8252920981523649920
-    second: Chicken-Baby Sprite Sheet_11
+      213: 6790829009448407881
+    second: Chicken-Baby Dancing Sprite Sheet_11
+  - first:
+      213: -4148319031428253068
+    second: Chicken-Baby Dancing Sprite Sheet_12
+  - first:
+      213: 4284979941910097249
+    second: Chicken-Baby Dancing Sprite Sheet_13
+  - first:
+      213: -6476112352601222810
+    second: Chicken-Baby Dancing Sprite Sheet_14
+  - first:
+      213: 2927661058141159724
+    second: Chicken-Baby Dancing Sprite Sheet_15
+  - first:
+      213: 1945956067704305855
+    second: Chicken-Baby Dancing Sprite Sheet_16
+  - first:
+      213: -5171032399498458452
+    second: Chicken-Baby Dancing Sprite Sheet_17
+  - first:
+      213: 35866432170700625
+    second: Chicken-Baby Dancing Sprite Sheet_18
+  - first:
+      213: 7106338793564086760
+    second: Chicken-Baby Dancing Sprite Sheet_19
+  - first:
+      213: 7406636791818057645
+    second: Chicken-Baby Dancing Sprite Sheet_20
+  - first:
+      213: 4114812060976490267
+    second: Chicken-Baby Dancing Sprite Sheet_21
+  - first:
+      213: 1608516287634734327
+    second: Chicken-Baby Dancing Sprite Sheet_22
+  - first:
+      213: 2589741534569421398
+    second: Chicken-Baby Dancing Sprite Sheet_23
+  - first:
+      213: 3486818372803785898
+    second: Chicken-Baby Dancing Sprite Sheet_24
+  - first:
+      213: -4907096679369540742
+    second: Chicken-Baby Dancing Sprite Sheet_25
+  - first:
+      213: 644018728335698182
+    second: Chicken-Baby Dancing Sprite Sheet_26
+  - first:
+      213: 1312519882093892680
+    second: Chicken-Baby Dancing Sprite Sheet_27
+  - first:
+      213: 6701186511433582249
+    second: Chicken-Baby Dancing Sprite Sheet_28
+  - first:
+      213: 4285904506507249444
+    second: Chicken-Baby Dancing Sprite Sheet_29
+  - first:
+      213: -598533207727875079
+    second: Chicken-Baby Dancing Sprite Sheet_30
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -146,265 +203,287 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_0
+      name: Chicken-Baby Dancing Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 417
-        y: 0
-        width: 1086
+        x: 0
+        y: 3840
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0e84ded6784eab30800000000000000
-      internalID: 4300454369567215114
+      spriteID: bccfbb5d71ddf3a20800000000000000
+      internalID: 3044394967565597899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_1
+      name: Chicken-Baby Dancing Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 2337
-        y: 0
-        width: 1086
+        x: 1920
+        y: 3840
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9683b79e4f7d74cb0800000000000000
-      internalID: -4879694224343484311
+      spriteID: c974b21ccaabf5180800000000000000
+      internalID: -9124369068891355236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_2
+      name: Chicken-Baby Dancing Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 4257
-        y: 0
-        width: 1086
+        x: 3840
+        y: 3840
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89a8ddfd712573620800000000000000
-      internalID: 2753759959653911192
+      spriteID: 9eb8b66cf83edc280800000000000000
+      internalID: -9021304271904470039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_3
+      name: Chicken-Baby Dancing Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 6177
-        y: 0
-        width: 1086
+        x: 5760
+        y: 3840
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27b99181c7ff7f580800000000000000
-      internalID: -8793278838972245134
+      spriteID: d7012184e8bf6c880800000000000000
+      internalID: -8590902650649571203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_4
+      name: Chicken-Baby Dancing Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 8097
-        y: 0
-        width: 1086
+        x: 7680
+        y: 3840
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27c6553927954a2c0800000000000000
-      internalID: -4421310585537991566
+      spriteID: 9ff53bee4132e94c0800000000000000
+      internalID: -4278944023144341511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_5
+      name: Chicken-Baby Dancing Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 10047
-        y: 0
-        width: 1146
+        x: 0
+        y: 1920
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2adeed7ded91ee0c0800000000000000
-      internalID: -4544666529075106398
+      spriteID: 4e6d5343e40f116b0800000000000000
+      internalID: -5327212665528527132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_6
+      name: Chicken-Baby Dancing Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 11967
-        y: 0
-        width: 1086
+        x: 1920
+        y: 1920
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc6186fea0a422cb0800000000000000
-      internalID: -4890264834544232757
+      spriteID: 66a03e406d1c8f700800000000000000
+      internalID: 574422077438888550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_7
+      name: Chicken-Baby Dancing Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 13857
-        y: 0
-        width: 1086
+        x: 3840
+        y: 1920
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5c378c4c7c1d5ee0800000000000000
-      internalID: -1270828199663158179
+      spriteID: 96440166dcb178460800000000000000
+      internalID: 7243789094643319913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_8
+      name: Chicken-Baby Dancing Sprite Sheet_8
       rect:
         serializedVersion: 2
-        x: 15767
-        y: 0
-        width: 1086
+        x: 5760
+        y: 1920
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1628036740a58e600800000000000000
-      internalID: 497746734033699425
+      spriteID: 9d278e72f3b802630800000000000000
+      internalID: 3900270380671595225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_9
+      name: Chicken-Baby Dancing Sprite Sheet_9
       rect:
         serializedVersion: 2
-        x: 17697
-        y: 0
-        width: 1116
+        x: 7680
+        y: 1920
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fcb13f4f88756f660800000000000000
-      internalID: 7419213681876212687
+      spriteID: d94ef088e352875b0800000000000000
+      internalID: -5370501605138373475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_10
+      name: Chicken-Baby Dancing Sprite Sheet_10
       rect:
         serializedVersion: 2
-        x: 19587
+        x: 0
         y: 0
-        width: 1176
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3660ea268abfcd360800000000000000
-      internalID: 7195903005259859555
+      spriteID: 9c566a41f4138efd0800000000000000
+      internalID: -2312544192936122935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken-Baby Sprite Sheet_11
+      name: Chicken-Baby Dancing Sprite Sheet_11
       rect:
         serializedVersion: 2
-        x: 21507
+        x: 5760
         y: 0
-        width: 1176
+        width: 1920
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 085d51728e3488270800000000000000
-      internalID: 8252920981523649920
+      spriteID: 9431796310fdd3e50800000000000000
+      internalID: 6790829009448407881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken-Baby Dancing Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47af9b4d1d53e66c0800000000000000
+      internalID: -4148319031428253068
       vertices: []
       indices: 
       edges: []
@@ -413,7 +492,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ea039847727a90546a2d558f7c07b635
+    spriteID: 9f0d0d65799ccb94d9edcc08b55b0ae5
     internalID: 0
     vertices: []
     indices: 
@@ -423,20 +502,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chicken-Baby Sprite Sheet_0: 4300454369567215114
-      Chicken-Baby Sprite Sheet_1: -4879694224343484311
-      Chicken-Baby Sprite Sheet_10: 7195903005259859555
-      Chicken-Baby Sprite Sheet_11: 8252920981523649920
-      Chicken-Baby Sprite Sheet_12: -2115681929
-      Chicken-Baby Sprite Sheet_13: -1631747229
-      Chicken-Baby Sprite Sheet_2: 2753759959653911192
-      Chicken-Baby Sprite Sheet_3: -8793278838972245134
-      Chicken-Baby Sprite Sheet_4: -4421310585537991566
-      Chicken-Baby Sprite Sheet_5: -4544666529075106398
-      Chicken-Baby Sprite Sheet_6: -4890264834544232757
-      Chicken-Baby Sprite Sheet_7: -1270828199663158179
-      Chicken-Baby Sprite Sheet_8: 497746734033699425
-      Chicken-Baby Sprite Sheet_9: 7419213681876212687
+      Chicken-Baby Dancing Sprite Sheet_0: 3044394967565597899
+      Chicken-Baby Dancing Sprite Sheet_1: -9124369068891355236
+      Chicken-Baby Dancing Sprite Sheet_10: -2312544192936122935
+      Chicken-Baby Dancing Sprite Sheet_11: 6790829009448407881
+      Chicken-Baby Dancing Sprite Sheet_12: -4148319031428253068
+      Chicken-Baby Dancing Sprite Sheet_2: -9021304271904470039
+      Chicken-Baby Dancing Sprite Sheet_3: -8590902650649571203
+      Chicken-Baby Dancing Sprite Sheet_4: -4278944023144341511
+      Chicken-Baby Dancing Sprite Sheet_5: -5327212665528527132
+      Chicken-Baby Dancing Sprite Sheet_6: 574422077438888550
+      Chicken-Baby Dancing Sprite Sheet_7: 7243789094643319913
+      Chicken-Baby Dancing Sprite Sheet_8: 3900270380671595225
+      Chicken-Baby Dancing Sprite Sheet_9: -5370501605138373475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
