@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using DG.Tweening;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class PetRuntime : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class PetRuntime : MonoBehaviour
     public ParticleSystem sparkleFX;
 
     [Header("Core Stats (0~100)")]
+    [Range(0, 100)] public float hunger = 60f;
     [Range(0, 100)] public float happiness = 0f;
 
     [Header("Need System (Random)")]
@@ -64,6 +66,8 @@ public class PetRuntime : MonoBehaviour
 
     [Tooltip("Optional penalty when the player performs the wrong action (0 = no penalty).")]
     public float wrongNeedPenalty = 0f;
+
+    public float Hunger01 => Mathf.Clamp01(hunger / 100f);
     public float Happiness01 => Mathf.Clamp01(happiness / 100f);
 
     public System.Action OnAnyStatZero;
