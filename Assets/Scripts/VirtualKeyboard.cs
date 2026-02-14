@@ -3,58 +3,82 @@ using TMPro;
 
 public class VirtualKeyboard : MonoBehaviour
 {
-    [Header("Refs")]
+    [Header("UI")]
     public GameObject panel;
-    public GameObject keyboard;
-    public TMP_InputField target;
+    public TMP_InputField targetInput;
+
+    [Header("SFX")]
+    public AudioClip typeClip;
+    public AudioSource sfxSource;
+    [Range(0f, 1f)] public float typeVolume = 1f;
+    public float typeCooldown = 0.03f;
+
+    private float _lastTypeTime = -999f;
+
+    void Awake()
+    {
+        if (sfxSource == null)
+            sfxSource = gameObject.AddComponent<AudioSource>();
+
+        sfxSource.playOnAwake = false;
+    }
+
+    void PlayTypeSfx()
+    {
+        if (typeClip == null || sfxSource == null) return;
+
+        if (typeCooldown > 0f && Time.unscaledTime - _lastTypeTime < typeCooldown)
+            return;
+
+        _lastTypeTime = Time.unscaledTime;
+        sfxSource.PlayOneShot(typeClip, typeVolume);
+    }
 
     public void Open(TMP_InputField input)
     {
-        target = input;
+        targetInput = input;
         if (panel != null) panel.SetActive(true);
-        if (keyboard != null) keyboard.SetActive(true);
 
-        if (target != null)
+        if (targetInput != null)
         {
-            target.ActivateInputField();
-            target.caretPosition = target.text.Length;
+            targetInput.ActivateInputField();
+            targetInput.caretPosition = targetInput.text.Length;
         }
     }
 
     public void Close()
     {
         if (panel != null) panel.SetActive(false);
-        if (keyboard != null) keyboard.SetActive(false);
-        if (target != null) target.DeactivateInputField();
-        target = null;
+        if (targetInput != null) targetInput.DeactivateInputField();
+        targetInput = null;
     }
 
     public void Type(string s)
     {
-        if (target == null) return;
-        target.text += s;
-        target.caretPosition = target.text.Length;
-        target.ActivateInputField();
+        if (targetInput == null) return;
+
+        targetInput.text += s;
+        targetInput.caretPosition = targetInput.text.Length;
+        targetInput.ActivateInputField();
+
+        PlayTypeSfx();
     }
 
-    public void Space() => Type(" ");
+    public void Space()
+    {
+        Type(" ");
+    }
 
     public void Backspace()
     {
-        if (target == null) return;
-        if (string.IsNullOrEmpty(target.text)) return;
+        if (targetInput == null) return;
+        if (string.IsNullOrEmpty(targetInput.text)) return;
 
-        target.text = target.text.Substring(0, target.text.Length - 1);
-        target.caretPosition = target.text.Length;
-        target.ActivateInputField();
-    }
+        targetInput.text = targetInput.text.Substring(0, targetInput.text.Length - 1);
+        targetInput.caretPosition = targetInput.text.Length;
+        targetInput.ActivateInputField();
 
-    public void Clear()
-    {
-        if (target == null) return;
-        target.text = "";
-        target.caretPosition = 0;
-        target.ActivateInputField();
+        PlayTypeSfx();
     }
 
     public void Done()
