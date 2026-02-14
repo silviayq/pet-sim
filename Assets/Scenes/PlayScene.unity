@@ -253,6 +253,9 @@ MonoBehaviour:
   finalScoreText: {fileID: 2103857840}
   btnReplay: {fileID: 775497453}
   btnCustomize: {fileID: 484817920}
+  petRoot: {fileID: 1655577561}
+  btnRoot: {fileID: 724940776}
+  extraHideOnResult: []
   useTimerWin: 0
   gameDuration: 60
 --- !u!1 &42483896
@@ -6365,9 +6368,9 @@ MonoBehaviour:
   thinkMusicSprite: {fileID: 21300000, guid: fc8d0c2e6f7928445bdb8ffdddce3dba, type: 3}
   chickenAudioSource: {fileID: 1894539769}
   plantAudioSource: {fileID: 431824475}
-  eatClip: {fileID: 8300000, guid: 0b5647ced769ec1478fe84de8b739b25, type: 3}
-  washClip: {fileID: 8300000, guid: 0b5647ced769ec1478fe84de8b739b25, type: 3}
-  happyClip: {fileID: 8300000, guid: 0b5647ced769ec1478fe84de8b739b25, type: 3}
+  eatClip: {fileID: 8300000, guid: 83eb89a82414cc8488e214fba15ec8ee, type: 3}
+  washClip: {fileID: 8300000, guid: 83eb89a82414cc8488e214fba15ec8ee, type: 3}
+  happyClip: {fileID: 8300000, guid: 83eb89a82414cc8488e214fba15ec8ee, type: 3}
   heartFX: {fileID: 4110788771243704029}
   sparkleFX: {fileID: 573105782}
   happiness: 0

@@ -130,9 +130,21 @@ public class PetRuntime : MonoBehaviour
     {
         int stage = GetStageByHappiness();
         if (!force && stage <= currentStage) return;
+
+        int prevStage = currentStage;
         currentStage = stage;
 
         //Sprite s = null;
+
+        if (!force && stage > prevStage)
+        {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayStageChange();
+        }
+
+        // if (petRenderer == null) return;
+
+
         if (speciesCached == Species.Chicken)
         {
             farmBackground.SetActive(true);
@@ -155,6 +167,7 @@ public class PetRuntime : MonoBehaviour
             audioSource = plantAudioSource;
             feedImage.sprite = waterSprite;
             thinkFeedSprite = thinkWaterSprite;
+
 
             petObject = plantObject;
             petRenderer = plantRenderer;
@@ -279,6 +292,7 @@ public class PetRuntime : MonoBehaviour
             return 0;
         }
     }
+
     public int Feed()
     {
         int gain = TrySatisfyNeed(NeedType.Feed);
