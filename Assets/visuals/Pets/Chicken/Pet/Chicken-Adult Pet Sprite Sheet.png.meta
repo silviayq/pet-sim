@@ -147,9 +147,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1920
-        height: 1920
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: Chicken-Adult Pet Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 1920
-        height: 1920
+        x: 2004
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: Chicken-Adult Pet Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 0
-        width: 1920
-        height: 1920
+        x: 4008
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: Chicken-Adult Pet Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 0
-        width: 1920
-        height: 1920
+        x: 6012
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: Chicken-Adult Pet Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 0
-        width: 1920
-        height: 1920
+        x: 8016
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: Chicken-Adult Pet Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 9600
+        x: 0
         y: 0
-        width: 1920
-        height: 1920
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,7 +278,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 791e74f99f1b89846bdb67247158c59d
+    spriteID: b466f829565b94e4dbf23501b2df8d13
     internalID: 0
     vertices: []
     indices: 

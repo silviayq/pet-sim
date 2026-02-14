@@ -2,6 +2,8 @@
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using DG.Tweening;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class PetRuntime : MonoBehaviour
 {
@@ -19,8 +21,12 @@ public class PetRuntime : MonoBehaviour
     public Sprite foodSprite;
     public Sprite waterSprite;
 
+    public GameObject chickenParent;
+    public GameObject plantParent;
+
     public GameObject chickenObject;
     public GameObject plantObject;
+    private GameObject petObject;
 
     public Animator chickenAnimator;
     public Animator plantAnimator;
@@ -80,13 +86,22 @@ public class PetRuntime : MonoBehaviour
     private Coroutine needLoopCo;
     private Coroutine timeoutCo;
 
+    public float wrongDuration;
+    public float shakePosIntensity;
+    public int shakePosVibration;
+
+    public SpriteRenderer chickenRenderer;
+    public SpriteRenderer plantRenderer;
+    public Color wrongColor;
+
+
     private void Start()
     {
         farmBackground.SetActive(false);
         gardenBackground.SetActive(false);
 
-        chickenObject.SetActive(false);
-        plantObject.SetActive(false);
+        chickenParent.SetActive(false);
+        plantParent.SetActive(false);
 
         var cfg = SaveLoad.LoadOrDefault();
         speciesCached = cfg.species;
@@ -94,9 +109,6 @@ public class PetRuntime : MonoBehaviour
         if (nameText) nameText.text = cfg.petName;
 
         plantName.text = chickenName.text = nameText.text;
-
-        if (petRenderer != null)
-            petRenderer.color = cfg.color;
 
         HideThinking();
 
@@ -122,33 +134,43 @@ public class PetRuntime : MonoBehaviour
         int prevStage = currentStage;
         currentStage = stage;
 
+        //Sprite s = null;
+
         if (!force && stage > prevStage)
         {
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayStageChange();
         }
 
-        if (petRenderer == null) return;
+        // if (petRenderer == null) return;
+
 
         if (speciesCached == Species.Chicken)
         {
             farmBackground.SetActive(true);
-            chickenObject.SetActive(true);
+            chickenParent.SetActive(true);
             animator = chickenAnimator;
 
             audioSource = chickenAudioSource;
             feedImage.sprite = foodSprite;
             thinkFeedSprite = thinkFoodSprite;
+
+            petObject = chickenObject;
+            petRenderer = chickenRenderer;
         }
         else
         {
             gardenBackground.SetActive(true);
-            plantObject.SetActive(true);
+            plantParent.SetActive(true);
             animator = plantAnimator;
 
             audioSource = plantAudioSource;
             feedImage.sprite = waterSprite;
             thinkFeedSprite = thinkWaterSprite;
+
+
+            petObject = plantObject;
+            petRenderer = plantRenderer;
         }
 
         if (stage == 2)
@@ -246,6 +268,12 @@ public class PetRuntime : MonoBehaviour
         }
         else
         {
+            Sequence wrong = DOTween.Sequence();
+            wrong.Append(petRenderer.DOColor(wrongColor, 0));
+            wrong.Append(petObject.transform.DOShakePosition(wrongDuration, shakePosIntensity, shakePosVibration, 90f, false, false));
+            wrong.Append(petRenderer.DOColor(Color.white, 0));
+            wrong.Play();
+
             if (wrongNeedPenalty > 0f)
             {
                 happiness = Mathf.Clamp(happiness - wrongNeedPenalty, 0f, 100f);
@@ -267,10 +295,10 @@ public class PetRuntime : MonoBehaviour
 
     public int Feed()
     {
-        animator.SetTrigger("Feed");
         int gain = TrySatisfyNeed(NeedType.Feed);
         if (gain > 0)
         {
+            animator.SetTrigger("Feed");
             if (audioSource && eatClip) audioSource.PlayOneShot(eatClip);
         }
         return gain;
@@ -278,10 +306,10 @@ public class PetRuntime : MonoBehaviour
 
     public int PlayWith()
     {
-        animator.SetTrigger("Pet");
         int gain = TrySatisfyNeed(NeedType.Play);
         if (gain > 0)
         {
+            animator.SetTrigger("Pet");
             if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
             if (heartFX) heartFX.Play();
         }
@@ -290,10 +318,10 @@ public class PetRuntime : MonoBehaviour
 
     public int Music()
     {
-        animator.SetTrigger("Dancing");
         int gain = TrySatisfyNeed(NeedType.Music);
         if (gain > 0)
         {
+            animator.SetTrigger("Dancing");
             if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
             if (heartFX) heartFX.Play();
         }

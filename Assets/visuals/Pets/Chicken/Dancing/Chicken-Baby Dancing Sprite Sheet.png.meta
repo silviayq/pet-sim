@@ -207,9 +207,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3840
-        width: 1920
-        height: 1920
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +228,10 @@ TextureImporter:
       name: Chicken-Baby Dancing Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 3840
-        width: 1920
-        height: 1920
+        x: 2004
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +250,10 @@ TextureImporter:
       name: Chicken-Baby Dancing Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 3840
-        width: 1920
-        height: 1920
+        x: 4008
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: Chicken-Baby Dancing Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 3840
-        width: 1920
-        height: 1920
+        x: 6012
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Chicken-Baby Dancing Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 3840
-        width: 1920
-        height: 1920
+        x: 8016
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,9 +317,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1920
-        width: 1920
-        height: 1920
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,10 +338,10 @@ TextureImporter:
       name: Chicken-Baby Dancing Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 1920
-        width: 1920
-        height: 1920
+        x: 2004
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,10 +360,10 @@ TextureImporter:
       name: Chicken-Baby Dancing Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 1920
-        width: 1920
-        height: 1920
+        x: 4008
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,10 +382,10 @@ TextureImporter:
       name: Chicken-Baby Dancing Sprite Sheet_8
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 1920
-        width: 1920
-        height: 1920
+        x: 6012
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,10 +404,10 @@ TextureImporter:
       name: Chicken-Baby Dancing Sprite Sheet_9
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 1920
-        width: 1920
-        height: 1920
+        x: 8016
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,8 +428,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1920
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,55 +444,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Chicken-Baby Dancing Sprite Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 0
-        width: 1920
-        height: 1920
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9431796310fdd3e50800000000000000
-      internalID: 6790829009448407881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chicken-Baby Dancing Sprite Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 0
-        width: 1920
-        height: 1920
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 47af9b4d1d53e66c0800000000000000
-      internalID: -4148319031428253068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9f0d0d65799ccb94d9edcc08b55b0ae5
+    spriteID: 549669770874c064e8281c698ef254f3
     internalID: 0
     vertices: []
     indices: 
@@ -505,8 +461,6 @@ TextureImporter:
       Chicken-Baby Dancing Sprite Sheet_0: 3044394967565597899
       Chicken-Baby Dancing Sprite Sheet_1: -9124369068891355236
       Chicken-Baby Dancing Sprite Sheet_10: -2312544192936122935
-      Chicken-Baby Dancing Sprite Sheet_11: 6790829009448407881
-      Chicken-Baby Dancing Sprite Sheet_12: -4148319031428253068
       Chicken-Baby Dancing Sprite Sheet_2: -9021304271904470039
       Chicken-Baby Dancing Sprite Sheet_3: -8590902650649571203
       Chicken-Baby Dancing Sprite Sheet_4: -4278944023144341511
