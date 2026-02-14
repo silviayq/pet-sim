@@ -800,7 +800,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -1189,10 +1189,10 @@ RectTransform:
   - {fileID: 59634787}
   m_Father: {fileID: 1490482076}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.043750003, y: 0}
+  m_AnchorMax: {x: 0.95624995, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_SizeDelta: {x: -6, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152819557
 MonoBehaviour:
@@ -2597,10 +2597,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 410220364}
   targetInput: {fileID: 1490482077}
+  pleaseObject: {fileID: 1354031691}
   typeClip: {fileID: 8300000, guid: a0a6b6ede49f8c249a19ce400e211bac, type: 3}
   sfxSource: {fileID: 0}
   typeVolume: 1
   typeCooldown: 0.03
+  characterLimit: 12
 --- !u!114 &410220366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2657,7 +2659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -75.3}
+  m_AnchoredPosition: {x: 0, y: -79.5}
   m_SizeDelta: {x: 1820, y: 766.0071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &437265398
@@ -3867,7 +3869,7 @@ MonoBehaviour:
   chickenToggle: {fileID: 157495460}
   plantToggle: {fileID: 1883963433}
   toggleGroup: {fileID: 258686930}
-  keyboard: {fileID: 2111725114}
+  keyboard: {fileID: 410220364}
   pleaseText: {fileID: 1354031692}
   pleaseTextShowDuration: 1.5
   chicken1: {fileID: -5064401156898091283, guid: 5a65e1f1ddd19db4faf001d026deb003, type: 3}
@@ -4041,7 +4043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -17.097717}
+  m_AnchoredPosition: {x: 0, y: -14.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683983227
@@ -5545,7 +5547,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 410220365}
         m_TargetAssemblyTypeName: VirtualKeyboard, Assembly-CSharp
-        m_MethodName: Clear
+        m_MethodName: ClearAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8849,8 +8851,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -8885,7 +8887,7 @@ MonoBehaviour:
   m_CharacterValidation: 0
   m_RegexValue: 
   m_GlobalPointSize: 14
-  m_CharacterLimit: 0
+  m_CharacterLimit: 12
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -8912,7 +8914,7 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
+  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0}
   m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
