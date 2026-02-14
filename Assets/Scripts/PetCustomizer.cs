@@ -8,12 +8,7 @@ public class PetCustomizer : MonoBehaviour
 {
     [Header("UI")]
     public TMP_InputField nameInput;
-    public TMP_Dropdown speciesDropdown;
     public Image previewImage;
-
-    //public Button btnColor1;
-    //public Button btnColor2;
-    //public Button btnColor3;
     public Button btnStart;
 
     public Toggle chickenToggle;
@@ -26,7 +21,7 @@ public class PetCustomizer : MonoBehaviour
     public GameObject keyboard;
 
     public TextMeshProUGUI pleaseText;
-    public float pleaseTextShowDuration;
+    public float pleaseTextShowDuration = 1.2f;
 
     [Header("Preview Sprites (Stage 1)")]
     public Sprite chicken1;
@@ -36,32 +31,25 @@ public class PetCustomizer : MonoBehaviour
 
     void Start()
     {
-        //speciesDropdown.ClearOptions();
-        //speciesDropdown.AddOptions(new System.Collections.Generic.List<string> { "Chicken", "Plant" });
-        //speciesDropdown.onValueChanged.AddListener(OnSpeciesChanged);
-
-        //btnColor1.onClick.AddListener(() => SetColor(ColorUtil.From255(255, 70, 70)));
-        //btnColor2.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 120, 255)));
-        //btnColor3.onClick.AddListener(() => SetColor(ColorUtil.From255(70, 200, 120)));
-
         pleaseText.gameObject.SetActive(false);
 
         chickenToggle.onValueChanged.AddListener(OnChickenSelected);
         plantToggle.onValueChanged.AddListener(OnPlantSelected);
 
+        if (nameInput != null)
+        {
+            nameInput.onValueChanged.AddListener((s) =>
+                current.petName = string.IsNullOrEmpty(s) ? "Buddy" : s
+            );
+        }
+
         btnStart.onClick.AddListener(StartGame);
 
-        //btnStart.gameObject.SetActive(false);
-
-        // default:chicken stage 1
-        //I use the placemat for the images
         current.species = Species.Chicken;
 
-        //ApplySpecies();
-        //SetColor(Color.white);
-        //UpdatePreview();
-
         toggleGroup.enabled = false;
+
+        UpdatePreview();
     }
 
     void OnChickenSelected(bool isOn)
@@ -69,9 +57,9 @@ public class PetCustomizer : MonoBehaviour
         if (!isOn) return;
 
         current.species = Species.Chicken;
-        //btnStart.gameObject.SetActive(true);
         toggleGroup.enabled = true;
         hasSelected = true;
+        UpdatePreview();
     }
 
     void OnPlantSelected(bool isOn)
@@ -79,80 +67,46 @@ public class PetCustomizer : MonoBehaviour
         if (!isOn) return;
 
         current.species = Species.Plant;
-        //btnStart.gameObject.SetActive(true);
         toggleGroup.enabled = true;
         hasSelected = true;
+        UpdatePreview();
     }
 
-    //public void SelectedChicken()
-    //{
-    //    current.species = Species.Chicken;
-    //    Debug.Log("Selected CHICKEN");
-    //    btnStart.gameObject.SetActive(true);
-    //}
-
-    //public void SelectedPlant()
-    //{
-    //    current.species = Species.Plant;
-    //    Debug.Log("Selected PLANT");
-    //    btnStart.gameObject.SetActive(true);
-    //}
+    void UpdatePreview()
+    {
+        if (previewImage == null) return;
+        previewImage.sprite = (current.species == Species.Chicken) ? chicken1 : plant1;
+    }
 
     void StartGame()
     {
-        string enteredName = nameInput.text;
-
-        keyboard.SetActive(false);
-
         if (!hasSelected)
         {
-            pleaseText.text = "Please select a pet!";
-            StartCoroutine(PleaseTextShow());
+            StartCoroutine(ShowPleaseText());
+            return;
         }
-        else if(string.IsNullOrWhiteSpace(enteredName))
-        {
-            pleaseText.text = "Please enter a name!";
-            StartCoroutine(PleaseTextShow());
-        }
-        else
-        {
-            current.petName = enteredName;
 
-            SaveLoad.Save(current);
-            SceneManager.LoadScene("PlayScene");
-        }
+        if (string.IsNullOrWhiteSpace(current.petName))
+            current.petName = "Buddy";
+
+        SaveLoad.Save(current);
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayStart();
+
+        StartCoroutine(LoadPlaySceneAfterSfx());
     }
 
-    private IEnumerator PleaseTextShow()
+    IEnumerator LoadPlaySceneAfterSfx()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("PlayScene");
+    }
+
+    IEnumerator ShowPleaseText()
     {
         pleaseText.gameObject.SetActive(true);
-
         yield return new WaitForSeconds(pleaseTextShowDuration);
-
         pleaseText.gameObject.SetActive(false);
     }
-
-    //void OnSpeciesChanged(int idx)
-    //{
-    //    current.species = (Species)idx;
-    //    ApplySpecies();
-    //    UpdatePreview();
-    //}
-
-    //void ApplySpecies()
-    //{
-    //    Sprite s = (current.species == Species.Chicken) ? chicken1 : plant1;
-    //    if (previewImage != null) previewImage.sprite = s;
-    //}
-
-    //void SetColor(Color c)
-    //{
-    //    current.color = c;
-    //    UpdatePreview();
-    //}
-
-    //void UpdatePreview()
-    //{
-    //    if (previewImage != null) previewImage.color = current.color;
-    //}
 }
