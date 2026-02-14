@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.EnhancedTouch;
 public class PetRuntime : MonoBehaviour
 {
     [Header("Refs")]
+    public SpriteRenderer petRenderer;
     public TMP_Text chickenName;
     public TMP_Text plantName;
 
@@ -38,6 +39,10 @@ public class PetRuntime : MonoBehaviour
     private Sprite thinkFeedSprite;
     public Sprite thinkPlaySprite;
     public Sprite thinkMusicSprite;
+
+    [Header("Action Texts")]
+    public TextMeshProUGUI feedBtnText;
+    public TextMeshProUGUI playBtnText;
 
     [Header("FX/Audio (optional)")]
     public AudioSource chickenAudioSource;
@@ -87,7 +92,6 @@ public class PetRuntime : MonoBehaviour
 
     public SpriteRenderer chickenRenderer;
     public SpriteRenderer plantRenderer;
-    private SpriteRenderer petRenderer;
     public Color wrongColor;
 
 
