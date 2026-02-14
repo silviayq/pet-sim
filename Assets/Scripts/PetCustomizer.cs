@@ -29,12 +29,16 @@ public class PetCustomizer : MonoBehaviour
 
     private PetConfigData current = new PetConfigData();
 
+    private Coroutine pleaseTextCoroutine;
+
     void Start()
     {
         pleaseText.gameObject.SetActive(false);
 
         chickenToggle.onValueChanged.AddListener(OnChickenSelected);
         plantToggle.onValueChanged.AddListener(OnPlantSelected);
+
+        keyboard.gameObject.SetActive(false);
 
         if (nameInput != null)
         {
@@ -82,19 +86,31 @@ public class PetCustomizer : MonoBehaviour
     {
         if (!hasSelected)
         {
-            StartCoroutine(ShowPleaseText());
+            pleaseText.text = "Please select a pet";
+            RestartPleaseTextCoroutine();
+            return;
+        }
+        else if (string.IsNullOrWhiteSpace(nameInput.text))
+        {
+            pleaseText.text = "Please enter a name";
+            RestartPleaseTextCoroutine();
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(current.petName))
-            current.petName = "Buddy";
-
-        SaveLoad.Save(current);
+            SaveLoad.Save(current);
 
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayStart();
 
         StartCoroutine(LoadPlaySceneAfterSfx());
+    }
+
+    private void RestartPleaseTextCoroutine()
+    {
+        if (pleaseTextCoroutine != null)
+            StopCoroutine(pleaseTextCoroutine);
+
+        pleaseTextCoroutine = StartCoroutine(ShowPleaseText());
     }
 
     IEnumerator LoadPlaySceneAfterSfx()
@@ -105,8 +121,10 @@ public class PetCustomizer : MonoBehaviour
 
     IEnumerator ShowPleaseText()
     {
+        keyboard.SetActive(false);
         pleaseText.gameObject.SetActive(true);
         yield return new WaitForSeconds(pleaseTextShowDuration);
         pleaseText.gameObject.SetActive(false);
+        pleaseTextCoroutine = null;
     }
 }

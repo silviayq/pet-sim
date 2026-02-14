@@ -6,6 +6,7 @@ public class VirtualKeyboard : MonoBehaviour
     [Header("UI")]
     public GameObject panel;
     public TMP_InputField targetInput;
+    public GameObject pleaseObject;
 
     [Header("SFX")]
     public AudioClip typeClip;
@@ -14,6 +15,8 @@ public class VirtualKeyboard : MonoBehaviour
     public float typeCooldown = 0.03f;
 
     private float _lastTypeTime = -999f;
+
+    public int characterLimit = 12;
 
     void Awake()
     {
@@ -38,6 +41,7 @@ public class VirtualKeyboard : MonoBehaviour
     {
         targetInput = input;
         if (panel != null) panel.SetActive(true);
+        pleaseObject.SetActive(false);
 
         if (targetInput != null)
         {
@@ -56,6 +60,7 @@ public class VirtualKeyboard : MonoBehaviour
     public void Type(string s)
     {
         if (targetInput == null) return;
+        if (targetInput.text.Length >= characterLimit) return;
 
         targetInput.text += s;
         targetInput.caretPosition = targetInput.text.Length;
@@ -66,7 +71,19 @@ public class VirtualKeyboard : MonoBehaviour
 
     public void Space()
     {
+        if (targetInput.text.Length >= characterLimit) return;
         Type(" ");
+    }
+
+    public void ClearAll()
+    {
+        if (targetInput == null) return;
+
+        targetInput.text = "";
+        targetInput.caretPosition = 0;
+        targetInput.ActivateInputField(); 
+
+        PlayTypeSfx();
     }
 
     public void Backspace()

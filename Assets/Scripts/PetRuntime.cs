@@ -21,6 +21,10 @@ public class PetRuntime : MonoBehaviour
     public Sprite foodSprite;
     public Sprite waterSprite;
 
+    public Image bowlImage;
+    public Sprite fullSprite;
+    public Sprite emptySprite;
+
     public GameObject chickenParent;
     public GameObject plantParent;
 
@@ -134,16 +138,11 @@ public class PetRuntime : MonoBehaviour
         int prevStage = currentStage;
         currentStage = stage;
 
-        //Sprite s = null;
-
         if (!force && stage > prevStage)
         {
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayStageChange();
         }
-
-        // if (petRenderer == null) return;
-
 
         if (speciesCached == Species.Chicken)
         {
@@ -251,7 +250,7 @@ public class PetRuntime : MonoBehaviour
 
     private int TrySatisfyNeed(NeedType action)
     {
-        if (currentNeed == NeedType.None) return 0;
+        //if (currentNeed == NeedType.None) return 0;
 
         if (currentNeed == action)
         {

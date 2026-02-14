@@ -670,15 +670,15 @@ RectTransform:
   m_GameObject: {fileID: 156231498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.0585217, y: 7.0585217, z: 7.0585217}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -10.44, y: 10.439999, z: 10.439999}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 647768996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: 627}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 829}
+  m_SizeDelta: {x: 398.7, y: 124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156231500
 MonoBehaviour:
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1111111
+  m_text: mynameislong
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 043e671001a88c343a099d1ae5d6c58b, type: 2}
   m_sharedMaterial: {fileID: 6278829012200437285, guid: 043e671001a88c343a099d1ae5d6c58b, type: 2}
@@ -727,8 +727,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63.9
-  m_fontSizeBase: 63.9
+  m_fontSize: 38.39
+  m_fontSizeBase: 38.39
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -9.854034, y: 0, z: -62.340652, w: 0}
+  m_margin: {x: -9.854034, y: 1.1056752, z: -62.340652, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1183,15 +1183,15 @@ RectTransform:
   m_GameObject: {fileID: 293115320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.0585217, y: 7.0585217, z: 7.0585217}
+  m_LocalScale: {x: -10.44, y: 10.44, z: 10.44}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 991235185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: 627}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 2, y: 774}
+  m_SizeDelta: {x: 379.8, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293115322
 MonoBehaviour:
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1111111
+  m_text: mynameislong
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 043e671001a88c343a099d1ae5d6c58b, type: 2}
   m_sharedMaterial: {fileID: 6278829012200437285, guid: 043e671001a88c343a099d1ae5d6c58b, type: 2}
@@ -1240,8 +1240,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63.9
-  m_fontSizeBase: 63.9
+  m_fontSize: 38.39
+  m_fontSizeBase: 38.39
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6347,6 +6347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d28aab71ae1a841857cf74f16f01eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  petRenderer: {fileID: 0}
   chickenName: {fileID: 156231500}
   plantName: {fileID: 293115322}
   nameText: {fileID: 156231500}
@@ -6355,6 +6356,9 @@ MonoBehaviour:
   feedImage: {fileID: 1025292110}
   foodSprite: {fileID: 3920547696042853087, guid: fbacc85dda46b3144ad169bbd14e86fc, type: 3}
   waterSprite: {fileID: 2187973797242420012, guid: 49b0896278789f646a20e0f4d69c259a, type: 3}
+  bowlImage: {fileID: 0}
+  fullSprite: {fileID: 0}
+  emptySprite: {fileID: 0}
   chickenParent: {fileID: 902295539}
   plantParent: {fileID: 2096819013}
   chickenObject: {fileID: 1894539765}
@@ -6366,6 +6370,8 @@ MonoBehaviour:
   thinkWaterSprite: {fileID: 2187973797242420012, guid: 49b0896278789f646a20e0f4d69c259a, type: 3}
   thinkPlaySprite: {fileID: 21300000, guid: ad0c8d4d464117f4ab6acc8b812fc19c, type: 3}
   thinkMusicSprite: {fileID: 21300000, guid: fc8d0c2e6f7928445bdb8ffdddce3dba, type: 3}
+  feedBtnText: {fileID: 0}
+  playBtnText: {fileID: 0}
   chickenAudioSource: {fileID: 1894539769}
   plantAudioSource: {fileID: 431824475}
   eatClip: {fileID: 8300000, guid: 83eb89a82414cc8488e214fba15ec8ee, type: 3}
@@ -6373,6 +6379,7 @@ MonoBehaviour:
   happyClip: {fileID: 8300000, guid: 83eb89a82414cc8488e214fba15ec8ee, type: 3}
   heartFX: {fileID: 4110788771243704029}
   sparkleFX: {fileID: 573105782}
+  hunger: 60
   happiness: 0
   needIntervalRange: {x: 4, y: 6}
   needTimeout: 3
@@ -6384,7 +6391,7 @@ MonoBehaviour:
   shakePosVibration: 20
   chickenRenderer: {fileID: 1894539766}
   plantRenderer: {fileID: 431824477}
-  wrongColor: {r: 1, g: 0.80817604, b: 0.80817604, a: 1}
+  wrongColor: {r: 1, g: 0.6949685, b: 0.6949685, a: 1}
 --- !u!1 &1732497123
 GameObject:
   m_ObjectHideFlags: 0
@@ -7989,7 +7996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2096819014
 Transform:
   m_ObjectHideFlags: 0
