@@ -94,7 +94,6 @@ public class GameManager : MonoBehaviour
 
         if (pet != null)
         {
-            if (hungerUI) hungerUI.UpdateStat(pet.Hunger01, pet.hunger);
             //if (cleanUI) cleanUI.UpdateStat(pet.Cleanliness01, pet.cleanliness);
             if (happyUI) happyUI.UpdateStat(pet.Happiness01, pet.happiness);
         }

@@ -2,24 +2,15 @@
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using DG.Tweening;
 
 public class PetRuntime : MonoBehaviour
 {
     [Header("Refs")]
-    public SpriteRenderer petRenderer;
     public TMP_Text chickenName;
     public TMP_Text plantName;
 
     public TMP_Text nameText;
-
-    [Header("Stage Sprites (1/2/3)")]
-    //public Sprite chicken1;
-    //public Sprite chicken2;
-    //public Sprite chicken3;
-
-    //public Sprite plant1;
-    //public Sprite plant2;
-    //public Sprite plant3;
 
     public GameObject farmBackground;
     public GameObject gardenBackground;
@@ -28,8 +19,12 @@ public class PetRuntime : MonoBehaviour
     public Sprite foodSprite;
     public Sprite waterSprite;
 
+    public GameObject chickenParent;
+    public GameObject plantParent;
+
     public GameObject chickenObject;
     public GameObject plantObject;
+    private GameObject petObject;
 
     public Animator chickenAnimator;
     public Animator plantAnimator;
@@ -40,14 +35,8 @@ public class PetRuntime : MonoBehaviour
     public Sprite thinkFoodSprite;
     public Sprite thinkWaterSprite;
     private Sprite thinkFeedSprite;
-    //public Sprite thinkCleanSprite;
     public Sprite thinkPlaySprite;
     public Sprite thinkMusicSprite;
-
-    [Header("Action Texts")]
-    public TextMeshProUGUI feedBtnText;
-    //public TextMeshProUGUI cleanBtnText;
-    public TextMeshProUGUI playBtnText;
 
     [Header("FX/Audio (optional)")]
     public AudioSource chickenAudioSource;
@@ -60,8 +49,6 @@ public class PetRuntime : MonoBehaviour
     public ParticleSystem sparkleFX;
 
     [Header("Core Stats (0~100)")]
-    [Range(0, 100)] public float hunger = 60f;
-    //[Range(0, 100)] public float cleanliness = 60f;
     [Range(0, 100)] public float happiness = 0f;
 
     [Header("Need System (Random)")]
@@ -77,9 +64,6 @@ public class PetRuntime : MonoBehaviour
 
     [Tooltip("Optional penalty when the player performs the wrong action (0 = no penalty).")]
     public float wrongNeedPenalty = 0f;
-
-    public float Hunger01 => Mathf.Clamp01(hunger / 100f);
-    //public float Cleanliness01 => Mathf.Clamp01(cleanliness / 100f);
     public float Happiness01 => Mathf.Clamp01(happiness / 100f);
 
     public System.Action OnAnyStatZero;
@@ -93,13 +77,23 @@ public class PetRuntime : MonoBehaviour
     private Coroutine needLoopCo;
     private Coroutine timeoutCo;
 
+    public float wrongDuration;
+    public float shakePosIntensity;
+    public int shakePosVibration;
+
+    public SpriteRenderer chickenRenderer;
+    public SpriteRenderer plantRenderer;
+    private SpriteRenderer petRenderer;
+    public Color wrongColor;
+
+
     private void Start()
     {
         farmBackground.SetActive(false);
         gardenBackground.SetActive(false);
 
-        chickenObject.SetActive(false);
-        plantObject.SetActive(false);
+        chickenParent.SetActive(false);
+        plantParent.SetActive(false);
 
         var cfg = SaveLoad.LoadOrDefault();
         speciesCached = cfg.species;
@@ -107,9 +101,6 @@ public class PetRuntime : MonoBehaviour
         if (nameText) nameText.text = cfg.petName;
 
         plantName.text = chickenName.text = nameText.text;
-
-        if (petRenderer != null)
-            petRenderer.color = cfg.color;
 
         HideThinking();
 
@@ -133,57 +124,32 @@ public class PetRuntime : MonoBehaviour
         if (!force && stage <= currentStage) return;
         currentStage = stage;
 
-        if (petRenderer == null) return;
-
         //Sprite s = null;
         if (speciesCached == Species.Chicken)
         {
             farmBackground.SetActive(true);
-            chickenObject.SetActive(true);
+            chickenParent.SetActive(true);
             animator = chickenAnimator;
-
-            //if (stage == 2)
-            //{
-            //    chickenAnimator.SetBool("Grow1", true);
-            //}
-            //else if (stage == 3)
-            //{
-            //    chickenAnimator.SetBool("Grow2", true);
-            //}
 
             audioSource = chickenAudioSource;
             feedImage.sprite = foodSprite;
             thinkFeedSprite = thinkFoodSprite;
 
-            //s = (stage == 1) ? chicken1 : (stage == 2) ? chicken2 : chicken3;
-            //feedBtnText.text = "Feed";
-            //cleanBtnText.text = "Wash";
-            //playBtnText.text = "Pet";
-            //Change icon sprite for official
+            petObject = chickenObject;
+            petRenderer = chickenRenderer;
         }
         else
         {
             gardenBackground.SetActive(true);
-            plantObject.SetActive(true);
+            plantParent.SetActive(true);
             animator = plantAnimator;
-
-            //if (stage == 2)
-            //{
-            //    plantAnimator.SetTrigger("Grow1");
-            //}
-            //else if (stage == 3)
-            //{
-            //    plantAnimator.SetTrigger("Grow2");
-            //}
 
             audioSource = plantAudioSource;
             feedImage.sprite = waterSprite;
             thinkFeedSprite = thinkWaterSprite;
 
-            //s = (stage == 1) ? plant1 : (stage == 2) ? plant2 : plant3;
-            //feedBtnText.text = "Water";
-            //cleanBtnText.text = "Trim";
-            //playBtnText.text = "Tend";
+            petObject = plantObject;
+            petRenderer = plantRenderer;
         }
 
         if (stage == 2)
@@ -194,8 +160,6 @@ public class PetRuntime : MonoBehaviour
         {
             animator.SetBool("Grow2", true);
         }
-
-        //if (s != null) petRenderer.sprite = s;
     }
 
     private IEnumerator NeedLoop()
@@ -252,7 +216,6 @@ public class PetRuntime : MonoBehaviour
         switch (need)
         {
             case NeedType.Feed: thinkingImage.sprite = thinkFeedSprite; break;
-            //case NeedType.Clean: thinkingImage.sprite = thinkCleanSprite; break;
             case NeedType.Play: thinkingImage.sprite = thinkPlaySprite; break;
             case NeedType.Music: thinkingImage.sprite = thinkMusicSprite; break;
         }
@@ -284,6 +247,12 @@ public class PetRuntime : MonoBehaviour
         }
         else
         {
+            Sequence wrong = DOTween.Sequence();
+            wrong.Append(petRenderer.DOColor(wrongColor, 0));
+            wrong.Append(petObject.transform.DOShakePosition(wrongDuration, shakePosIntensity, shakePosVibration, 90f, false, false));
+            wrong.Append(petRenderer.DOColor(Color.white, 0));
+            wrong.Play();
+
             if (wrongNeedPenalty > 0f)
             {
                 happiness = Mathf.Clamp(happiness - wrongNeedPenalty, 0f, 100f);
@@ -304,33 +273,21 @@ public class PetRuntime : MonoBehaviour
     }
     public int Feed()
     {
-        animator.SetTrigger("Feed");
         int gain = TrySatisfyNeed(NeedType.Feed);
         if (gain > 0)
         {
+            animator.SetTrigger("Feed");
             if (audioSource && eatClip) audioSource.PlayOneShot(eatClip);
-            //if (heartFX) heartFX.Play();
         }
         return gain;
     }
 
-    //public int Clean()
-    //{
-    //    int gain = TrySatisfyNeed(NeedType.Clean);
-    //    if (gain > 0)
-    //    {
-    //        if (audioSource && washClip) audioSource.PlayOneShot(washClip);
-    //        if (sparkleFX) sparkleFX.Play();
-    //    }
-    //    return gain;
-    //}
-
     public int PlayWith()
     {
-        animator.SetTrigger("Pet");
         int gain = TrySatisfyNeed(NeedType.Play);
         if (gain > 0)
         {
+            animator.SetTrigger("Pet");
             if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
             if (heartFX) heartFX.Play();
         }
@@ -339,10 +296,10 @@ public class PetRuntime : MonoBehaviour
 
     public int Music()
     {
-        animator.SetTrigger("Dancing");
         int gain = TrySatisfyNeed(NeedType.Music);
         if (gain > 0)
         {
+            animator.SetTrigger("Dancing");
             if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
             if (heartFX) heartFX.Play();
         }

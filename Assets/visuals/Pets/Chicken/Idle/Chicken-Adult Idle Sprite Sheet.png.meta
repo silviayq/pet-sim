@@ -3,14 +3,14 @@ guid: 8c0634387bb23fa43994eee25b5606f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -824776062869307009
-    second: Chicken-Adult Sprite Sheet_0
+      213: -1071697970398177428
+    second: Chicken-Adult Idle Sprite Sheet_0
   - first:
-      213: -232567596011100137
-    second: Chicken-Adult Sprite Sheet_1
+      213: 2285267338460966364
+    second: Chicken-Adult Idle Sprite Sheet_1
   - first:
-      213: 4696134385248556247
-    second: Chicken-Adult Sprite Sheet_2
+      213: -1643621369337795762
+    second: Chicken-Adult Idle Sprite Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,18 +124,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1920
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8914624c476457d4882241e93fea8606
-      internalID: 1365435959
+      spriteID: c67d8efbf509021f0800000000000000
+      internalID: -1071697970398177428
       vertices: []
       indices: 
       edges: []
@@ -144,20 +144,20 @@ TextureImporter:
       name: Chicken-Adult Idle Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 2004
         y: 0
-        width: 1920
-        height: 1920
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1f777dfbf4aea60458dc60afbdf4169d
-      internalID: 760908504
+      spriteID: cdda4c55986e6bf10800000000000000
+      internalID: 2285267338460966364
       vertices: []
       indices: 
       edges: []
@@ -166,20 +166,20 @@ TextureImporter:
       name: Chicken-Adult Idle Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 4008
         y: 0
-        width: 1920
-        height: 1920
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6714b3490b571c7489afc669df0d6882
-      internalID: 10196587
+      spriteID: e4b2167a21fa039e0800000000000000
+      internalID: -1643621369337795762
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b1b22f4e5c44f234992ba642e5302a4b
+    spriteID: 93c631d6fa6e21147b2908b1f355c96f
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chicken-Adult Idle Sprite Sheet_0: 1365435959
-      Chicken-Adult Idle Sprite Sheet_1: 760908504
-      Chicken-Adult Idle Sprite Sheet_2: 10196587
+      Chicken-Adult Idle Sprite Sheet_0: -1071697970398177428
+      Chicken-Adult Idle Sprite Sheet_1: 2285267338460966364
+      Chicken-Adult Idle Sprite Sheet_2: -1643621369337795762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -107,6 +107,9 @@ TextureImporter:
   - first:
       213: 4446454369883298135
     second: Chicken-Teen Dancing Sprite Sheet_34
+  - first:
+      213: -7721433671462233516
+    second: Chicken-Teen Dancing Sprite Sheet_35
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -219,9 +222,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 5760
-        width: 1920
-        height: 1920
+        y: 6012
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +243,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 5760
-        width: 1920
-        height: 1920
+        x: 2004
+        y: 6012
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +265,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 5760
-        width: 1920
-        height: 1920
+        x: 4008
+        y: 6012
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +287,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 5760
-        width: 1920
-        height: 1920
+        x: 6012
+        y: 6012
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +309,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 5760
-        width: 1920
-        height: 1920
+        x: 8016
+        y: 6012
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,9 +332,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3840
-        width: 1920
-        height: 1920
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +353,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 3840
-        width: 1920
-        height: 1920
+        x: 2004
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,10 +375,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 3840
-        width: 1920
-        height: 1920
+        x: 4008
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,10 +397,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_8
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 3840
-        width: 1920
-        height: 1920
+        x: 6012
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -416,10 +419,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_9
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 3840
-        width: 1920
-        height: 1920
+        x: 8016
+        y: 4008
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,9 +442,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1920
-        width: 1920
-        height: 1920
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,10 +463,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_11
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 1920
-        width: 1920
-        height: 1920
+        x: 2004
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,10 +485,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_12
       rect:
         serializedVersion: 2
-        x: 3840
-        y: 1920
-        width: 1920
-        height: 1920
+        x: 4008
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +507,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_13
       rect:
         serializedVersion: 2
-        x: 5760
-        y: 1920
-        width: 1920
-        height: 1920
+        x: 6012
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,10 +529,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_14
       rect:
         serializedVersion: 2
-        x: 7680
-        y: 1920
-        width: 1920
-        height: 1920
+        x: 8016
+        y: 2004
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,8 +553,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1920
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,10 +573,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_16
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 2004
         y: 0
-        width: 1920
-        height: 1920
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -592,10 +595,10 @@ TextureImporter:
       name: Chicken-Teen Dancing Sprite Sheet_17
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 4008
         y: 0
-        width: 1920
-        height: 1920
+        width: 2004
+        height: 2004
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,33 +613,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Chicken-Teen Dancing Sprite Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 0
-        width: 1920
-        height: 1920
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efdbdb89c5cc5ee80800000000000000
-      internalID: -8149883252585415170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0464869b624c62146bdbb8171151c50d
+    spriteID: e6826a8ac597ceb439b18805239e1fa8
     internalID: 0
     vertices: []
     indices: 
@@ -656,7 +637,6 @@ TextureImporter:
       Chicken-Teen Dancing Sprite Sheet_15: 8433964584848852668
       Chicken-Teen Dancing Sprite Sheet_16: 5180933657461068843
       Chicken-Teen Dancing Sprite Sheet_17: 3336431469395828204
-      Chicken-Teen Dancing Sprite Sheet_18: -8149883252585415170
       Chicken-Teen Dancing Sprite Sheet_2: 7188547845406055178
       Chicken-Teen Dancing Sprite Sheet_3: -8671330845677511068
       Chicken-Teen Dancing Sprite Sheet_4: -1313929832193800582
