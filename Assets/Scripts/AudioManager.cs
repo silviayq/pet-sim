@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -27,6 +28,8 @@ public class AudioManager : MonoBehaviour
 
         if (bgmSource == null) bgmSource = gameObject.AddComponent<AudioSource>();
         if (sfxSource == null) sfxSource = gameObject.AddComponent<AudioSource>();
+
+        bgmSource.volume = 0.7f;
 
         bgmSource.loop = true;
         bgmSource.playOnAwake = false;
@@ -58,6 +61,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlayStageChange()
     {
+        StartCoroutine(WaitBeforeAudio());
+    }
+
+    private IEnumerator WaitBeforeAudio()
+    {
+        yield return new WaitForSeconds(1f);
         if (stageChange) sfxSource.PlayOneShot(stageChange);
     }
 
@@ -68,6 +77,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlayWin()
     {
-        if (win) sfxSource.PlayOneShot(win);
+        //if (win) sfxSource.PlayOneShot(win);
     }
 }

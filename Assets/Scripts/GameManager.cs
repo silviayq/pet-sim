@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public UnityEngine.UI.Button btnMusic;
 
     [Header("Result UI")]
+    public GameObject blackScreen;
+    public float blackDuration;
     public GameObject resultPanel;
     public TMP_Text resultTitleText;
     public TMP_Text finalScoreText;
@@ -41,6 +43,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        blackScreen.SetActive(false);
+
         timeLeft = gameDuration;
         ended = false;
 
@@ -118,7 +122,7 @@ public class GameManager : MonoBehaviour
     {
         if (ended || pet == null) return;
 
-        if (AudioManager.Instance) AudioManager.Instance.PlayClick();
+        //if (AudioManager.Instance) AudioManager.Instance.PlayClick();
         int gain = pet.Feed();
         score += gain;
         UpdateUI();
@@ -129,7 +133,7 @@ public class GameManager : MonoBehaviour
     {
         if (ended || pet == null) return;
 
-        if (AudioManager.Instance) AudioManager.Instance.PlayClick();
+        //if (AudioManager.Instance) AudioManager.Instance.PlayClick();
         int gain = pet.PlayWith();
         score += gain;
         UpdateUI();
@@ -140,7 +144,7 @@ public class GameManager : MonoBehaviour
     {
         if (ended || pet == null) return;
 
-        if (AudioManager.Instance) AudioManager.Instance.PlayClick();
+        //if (AudioManager.Instance) AudioManager.Instance.PlayClick();
         int gain = pet.Music();
         score += gain;
         UpdateUI();
@@ -152,6 +156,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         EndGame(true);
     }
+
     void EndGame(bool win)
     {
         ended = true;
@@ -164,10 +169,18 @@ public class GameManager : MonoBehaviour
                 if (go) go.SetActive(false);
         }
 
+        blackScreen.SetActive(true);
+
         if (win && AudioManager.Instance) AudioManager.Instance.PlayWin();
 
-        if (resultPanel) resultPanel.SetActive(true);
+        StartCoroutine(ShowBlackScreen());
         //if (resultTitleText) resultTitleText.text = win ? "You Win!" : "Game Over";
         //if (finalScoreText) finalScoreText.text = $"Final Score: {score}";
+    }
+    private IEnumerator ShowBlackScreen()
+    {
+        yield return new WaitForSeconds(blackDuration);
+        blackScreen.SetActive(false);
+        if (resultPanel) resultPanel.SetActive(true);
     }
 }

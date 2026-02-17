@@ -48,6 +48,9 @@ public class VirtualKeyboard : MonoBehaviour
             targetInput.ActivateInputField();
             targetInput.caretPosition = targetInput.text.Length;
         }
+
+        Debug.Log("Open called");
+        PlayTypeSfx();
     }
 
     public void Close()
@@ -55,6 +58,8 @@ public class VirtualKeyboard : MonoBehaviour
         if (panel != null) panel.SetActive(false);
         if (targetInput != null) targetInput.DeactivateInputField();
         targetInput = null;
+
+        PlayTypeSfx();
     }
 
     public void Type(string s)
