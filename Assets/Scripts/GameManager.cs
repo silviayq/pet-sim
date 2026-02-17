@@ -171,8 +171,9 @@ public class GameManager : MonoBehaviour
 
         blackScreen.SetActive(true);
 
-        if (win && AudioManager.Instance) AudioManager.Instance.PlayWin();
+        //if (win && AudioManager.Instance) AudioManager.Instance.PlayWin();
 
+        if (win && AudioManager.Instance) AudioManager.Instance.StopBGM();
         StartCoroutine(ShowBlackScreen());
         //if (resultTitleText) resultTitleText.text = win ? "You Win!" : "Game Over";
         //if (finalScoreText) finalScoreText.text = $"Final Score: {score}";
@@ -180,6 +181,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator ShowBlackScreen()
     {
         yield return new WaitForSeconds(blackDuration);
+        if (AudioManager.Instance) AudioManager.Instance.PlayBGM();
         blackScreen.SetActive(false);
         if (resultPanel) resultPanel.SetActive(true);
     }
