@@ -663,11 +663,11 @@ RectTransform:
   m_LocalScale: {x: 1.8499001, y: 2.008236, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 410220368}
+  m_Father: {fileID: 154929442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.885681, y: 412}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 486.54, y: 119.1737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55876967
@@ -1208,6 +1208,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &154929441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154929442}
+  m_Layer: 5
+  m_Name: KeyboardParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &154929442
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154929441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 55876966}
+  - {fileID: 2111725115}
+  m_Father: {fileID: 410220368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 18.885681, y: 412}
+  m_SizeDelta: {x: 900.0504, y: 239.32889}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &157495455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1368,19 @@ MonoBehaviour:
   m_Group: {fileID: 258686930}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1639899230}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &157495461
 MonoBehaviour:
@@ -2582,7 +2631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &410220365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2595,7 +2644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2658ba2938daf1949b45f4808b9e4f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 410220364}
+  panel: {fileID: 154929441}
   targetInput: {fileID: 1490482077}
   pleaseObject: {fileID: 1354031691}
   typeClip: {fileID: 8300000, guid: a0a6b6ede49f8c249a19ce400e211bac, type: 3}
@@ -2653,8 +2702,7 @@ RectTransform:
   m_LocalScale: {x: 0.1139848, y: 0.1139848, z: 0.1139848}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 55876966}
-  - {fileID: 2111725115}
+  - {fileID: 154929442}
   m_Father: {fileID: 1641244377}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3869,7 +3917,7 @@ MonoBehaviour:
   chickenToggle: {fileID: 157495460}
   plantToggle: {fileID: 1883963433}
   toggleGroup: {fileID: 258686930}
-  keyboard: {fileID: 410220364}
+  keyboard: {fileID: 154929441}
   pleaseText: {fileID: 1354031692}
   pleaseTextShowDuration: 1.5
   chicken1: {fileID: -5064401156898091283, guid: 5a65e1f1ddd19db4faf001d026deb003, type: 3}
@@ -4068,7 +4116,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -4089,7 +4137,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 683983228}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1639899230}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &683983228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8800,7 +8860,6 @@ GameObject:
   - component: {fileID: 1490482079}
   - component: {fileID: 1490482078}
   - component: {fileID: 1490482077}
-  - component: {fileID: 1490482081}
   - component: {fileID: 1490482080}
   m_Layer: 5
   m_Name: NameInput
@@ -8851,8 +8910,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -8896,7 +8955,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 410220365}
+        m_TargetAssemblyTypeName: VirtualKeyboard, Assembly-CSharp
+        m_MethodName: Open
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1490482077}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnDeselect:
     m_PersistentCalls:
       m_Calls: []
@@ -8982,35 +9053,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyboard: {fileID: 410220365}
   input: {fileID: 1490482077}
---- !u!114 &1490482081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490482075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 410220365}
-          m_TargetAssemblyTypeName: VirtualKeyboard, Assembly-CSharp
-          m_MethodName: Open
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1490482077}
-            m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1507903803
 GameObject:
   m_ObjectHideFlags: 0
@@ -9646,9 +9688,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm: {fileID: 8300000, guid: 2c7f493826a829f4b9e455fce6e3a32d, type: 3}
   click: {fileID: 8300000, guid: 83eb89a82414cc8488e214fba15ec8ee, type: 3}
-  stageChange: {fileID: 8300000, guid: 414b8c783db7ec3418058201097b336a, type: 3}
+  stageChange: {fileID: 8300000, guid: bab9f0fc0bd0c7747b901d6c61f8a248, type: 3}
   start: {fileID: 8300000, guid: 82aba964b507b264698ba6a2505bd5ad, type: 3}
-  win: {fileID: 8300000, guid: ef1545b34cd6dbd409eaf8c3c9d4db1e, type: 3}
+  win: {fileID: 8300000, guid: bab9f0fc0bd0c7747b901d6c61f8a248, type: 3}
   bgmSource: {fileID: 0}
   sfxSource: {fileID: 0}
 --- !u!4 &1639899231
@@ -11258,7 +11300,19 @@ MonoBehaviour:
   m_Group: {fileID: 258686930}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1639899230}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &1883963434
 MonoBehaviour:
@@ -12783,11 +12837,11 @@ RectTransform:
   - {fileID: 109655981}
   - {fileID: 814022433}
   - {fileID: 2092665933}
-  m_Father: {fileID: 410220368}
+  m_Father: {fileID: 154929442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58, y: 406}
+  m_AnchoredPosition: {x: 39.114258, y: -6.000061}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807

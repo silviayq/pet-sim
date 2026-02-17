@@ -63,8 +63,12 @@ public class PetRuntime : MonoBehaviour
     public AudioSource plantAudioSource;
     private AudioSource audioSource;
     public AudioClip eatClip;
-    public AudioClip washClip;
+    public AudioClip waterClip;
     public AudioClip happyClip;
+    public AudioClip trimClip;
+    public AudioClip musicClip;
+    public AudioClip thinkClip;
+    public AudioClip errorClip;
     public ParticleSystem heartFX;
     public ParticleSystem sparkleFX;
 
@@ -249,6 +253,7 @@ public class PetRuntime : MonoBehaviour
         if (currentNeed != NeedType.None && wrongNeedPenalty > 0f)
         {
             happiness = Mathf.Clamp(happiness - wrongNeedPenalty, 0f, 100f);
+            Penalty();
             ApplyStageSprite();
         }
 
@@ -260,6 +265,7 @@ public class PetRuntime : MonoBehaviour
     private void ShowThinking(NeedType need)
     {
         if (!thinkingImage) return;
+        audioSource.PlayOneShot(thinkClip);
         thinkingImage.enabled = true;
         switch (need)
         {
@@ -295,12 +301,7 @@ public class PetRuntime : MonoBehaviour
         }
         else
         {
-            //Wrong animation
-            Sequence wrong = DOTween.Sequence();
-            wrong.Append(petRenderer.DOColor(wrongColor, 0));
-            wrong.Append(petObject.transform.DOShakePosition(wrongDuration, shakePosIntensity, shakePosVibration, 90f, false, false));
-            wrong.Append(petRenderer.DOColor(Color.white, 0));
-            wrong.Play();
+            Penalty();
 
             if (wrongNeedPenalty > 0f)
             {
@@ -321,6 +322,16 @@ public class PetRuntime : MonoBehaviour
         }
     }
 
+    private void Penalty()
+    {
+        Sequence wrong = DOTween.Sequence();
+        wrong.Append(petRenderer.DOColor(wrongColor, 0));
+        wrong.Append(petObject.transform.DOShakePosition(wrongDuration, shakePosIntensity, shakePosVibration, 90f, false, false));
+        wrong.Append(petRenderer.DOColor(Color.white, 0));
+        wrong.Play();
+        audioSource.PlayOneShot(errorClip);
+    }
+
     public int Feed()
     {
         int gain = TrySatisfyNeed(NeedType.Feed);
@@ -328,13 +339,15 @@ public class PetRuntime : MonoBehaviour
         {
             if (isChicken)
             {
+                animator.SetTrigger("Feed");
                 foodBowlAnimator.SetTrigger("Feed");
+                audioSource.PlayOneShot(eatClip);
             }
             else
             {
                 animator.SetTrigger("Feed");
+                audioSource.PlayOneShot(waterClip);
             }
-            if (audioSource && eatClip) audioSource.PlayOneShot(eatClip);
         }
         return gain;
     }
@@ -345,8 +358,16 @@ public class PetRuntime : MonoBehaviour
         if (gain > 0)
         {
             animator.SetTrigger("Pet");
-            if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
-            if (heartFX) heartFX.Play();
+
+            if (isChicken)
+            {
+                audioSource.PlayOneShot(happyClip);
+            }
+            else
+            {
+                audioSource.PlayOneShot(trimClip);
+            }
+            //if (heartFX) heartFX.Play();
         }
         return gain;
     }
@@ -357,8 +378,8 @@ public class PetRuntime : MonoBehaviour
         if (gain > 0)
         {
             animator.SetTrigger("Dancing");
-            if (audioSource && happyClip) audioSource.PlayOneShot(happyClip);
-            if (heartFX) heartFX.Play();
+            audioSource.PlayOneShot(musicClip);
+            //if (heartFX) heartFX.Play();
         }
         return gain;
     }
