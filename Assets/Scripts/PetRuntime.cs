@@ -17,6 +17,11 @@ public class PetRuntime : MonoBehaviour
     public GameObject farmBackground;
     public GameObject gardenBackground;
 
+    public GameObject pettingHand;
+    public Vector3 pettingBabyPos;
+    public Vector3 pettingTeenPos;
+    public Vector3 pettingAdultPos;
+
     public Image feedImage;
     public Sprite foodSprite;
     public Sprite waterSprite;
@@ -64,7 +69,9 @@ public class PetRuntime : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip eatClip;
     public AudioClip waterClip;
-    public AudioClip happyClip;
+    public AudioClip happyBabyClip;
+    public AudioClip happyAdultClip;
+    private AudioClip happyClip;
     public AudioClip trimClip;
     public AudioClip musicClip;
     public AudioClip thinkClip;
@@ -112,8 +119,16 @@ public class PetRuntime : MonoBehaviour
     public SpriteRenderer plantRenderer;
     public Color wrongColor;
 
+    private bool needActive = false;
+
+    private Coroutine thinkingCoroutine;
+
+    private bool actionLocked = false;
+
     private void Start()
     {
+        pettingHand.SetActive(false);
+
         farmBackground.SetActive(false);
         gardenBackground.SetActive(false);
 
@@ -133,6 +148,8 @@ public class PetRuntime : MonoBehaviour
         ApplyStageSprite(force: true);
 
         needLoopCo = StartCoroutine(NeedLoop());
+
+        pettingHand.transform.localPosition = pettingBabyPos;
     }
 
     private int GetStageByHappiness()
@@ -174,6 +191,8 @@ public class PetRuntime : MonoBehaviour
 
             thinkingBubble.transform.localPosition = chickenThinkingPos;
 
+            happyClip = happyBabyClip;
+
             isChicken = true;
         }
         else
@@ -199,12 +218,27 @@ public class PetRuntime : MonoBehaviour
 
         if (stage == 2)
         {
+            StartCoroutine(DelayNewHandPos(pettingTeenPos));
             animator.SetBool("Grow1", true);
         }
         else if (stage == 3)
         {
+            StartCoroutine(DelayNewHappyAudio());
+            StartCoroutine(DelayNewHandPos(pettingAdultPos));
             animator.SetBool("Grow2", true);
         }
+    }
+
+    private IEnumerator DelayNewHandPos(Vector3 newPos)
+    {
+        yield return new WaitForSeconds(2f);
+        pettingHand.transform.localPosition = newPos;
+    }
+
+    private IEnumerator DelayNewHappyAudio()
+    {
+        yield return new WaitForSeconds(2f);
+        happyClip = happyAdultClip;
     }
 
     private IEnumerator NeedLoop()
@@ -232,7 +266,7 @@ public class PetRuntime : MonoBehaviour
             }
 
             thinkingBubble.SetActive(true);
-            StartCoroutine(ThinkingSequence());
+            thinkingCoroutine = StartCoroutine(ThinkingSequence());
 
             if (timeoutCo != null) StopCoroutine(timeoutCo);
             timeoutCo = StartCoroutine(NeedTimeout());
@@ -273,11 +307,19 @@ public class PetRuntime : MonoBehaviour
             case NeedType.Play: thinkingImage.transform.localScale = thinkTendSize; thinkingImage.sprite = thinkPlaySprite; break;
             case NeedType.Music: thinkingImage.transform.localScale = thinkMusicSize; thinkingImage.sprite = thinkMusicSprite; break;
         }
+
+        needActive = true;
     }
 
     private void HideThinking()
     {
         if (!thinkingImage) return;
+        if (thinkingCoroutine != null)
+        {
+            StopCoroutine(thinkingCoroutine);
+            thinkingCoroutine = null;
+        }
+        needActive = false;
         thinkingBubble.SetActive(false);
         thinkingImage.enabled = false;
         thinkingImage.sprite = null;
@@ -286,7 +328,9 @@ public class PetRuntime : MonoBehaviour
 
     private int TrySatisfyNeed(NeedType action)
     {
-        if (currentNeed == action)
+        if (actionLocked) return 0;
+
+        if (currentNeed == action && needActive)
         {
             happiness = Mathf.Clamp(happiness + correctNeedHappinessGain, 0f, 100f);
 
@@ -324,6 +368,7 @@ public class PetRuntime : MonoBehaviour
 
     private void Penalty()
     {
+        StartCoroutine(ActionLockRoutine(0.5f));
         Sequence wrong = DOTween.Sequence();
         wrong.Append(petRenderer.DOColor(wrongColor, 0));
         wrong.Append(petObject.transform.DOShakePosition(wrongDuration, shakePosIntensity, shakePosVibration, 90f, false, false));
@@ -348,6 +393,7 @@ public class PetRuntime : MonoBehaviour
                 animator.SetTrigger("Feed");
                 audioSource.PlayOneShot(waterClip);
             }
+            StartCoroutine(ActionLockRoutine(1.5f));
         }
         return gain;
     }
@@ -361,6 +407,7 @@ public class PetRuntime : MonoBehaviour
 
             if (isChicken)
             {
+                pettingHand.SetActive(true);
                 audioSource.PlayOneShot(happyClip);
             }
             else
@@ -368,6 +415,7 @@ public class PetRuntime : MonoBehaviour
                 audioSource.PlayOneShot(trimClip);
             }
             //if (heartFX) heartFX.Play();
+            StartCoroutine(ActionLockRoutine(1.1f));
         }
         return gain;
     }
@@ -380,7 +428,16 @@ public class PetRuntime : MonoBehaviour
             animator.SetTrigger("Dancing");
             audioSource.PlayOneShot(musicClip);
             //if (heartFX) heartFX.Play();
+            StartCoroutine(ActionLockRoutine(1.1f));
         }
         return gain;
+    }
+
+    private IEnumerator ActionLockRoutine(float duration)
+    {
+        actionLocked = true;
+        yield return new WaitForSeconds(duration);
+        pettingHand.SetActive(false);
+        actionLocked = false;
     }
 }
