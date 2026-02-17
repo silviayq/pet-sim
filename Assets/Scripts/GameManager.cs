@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -72,23 +74,30 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (ended) return;
-
-        if (pet != null && pet.happiness >= 100f)
+        if (ended)
         {
-            EndGame(true);
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene("CustomizationScene");
+            }
             return;
         }
 
-        if (useTimerWin)
+        if (pet != null && pet.happiness >= 100f)
         {
-            timeLeft -= Time.deltaTime;
-            if (timeLeft <= 0f)
-            {
-                timeLeft = 0f;
-                EndGame(true);
-            }
+            StartCoroutine(WaitForActionToEnd());
+            return;
         }
+
+        //if (useTimerWin)
+        //{
+        //    timeLeft -= Time.deltaTime;
+        //    if (timeLeft <= 0f)
+        //    {
+        //        timeLeft = 0f;
+        //        EndGame(true);
+        //    }
+        //}
 
         UpdateUI();
     }
@@ -113,6 +122,7 @@ public class GameManager : MonoBehaviour
         int gain = pet.Feed();
         score += gain;
         UpdateUI();
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     void OnPlayWith()
@@ -123,6 +133,7 @@ public class GameManager : MonoBehaviour
         int gain = pet.PlayWith();
         score += gain;
         UpdateUI();
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     void OnMusic()
@@ -133,8 +144,14 @@ public class GameManager : MonoBehaviour
         int gain = pet.Music();
         score += gain;
         UpdateUI();
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
+    private IEnumerator WaitForActionToEnd()
+    {
+        yield return new WaitForSeconds(1f);
+        EndGame(true);
+    }
     void EndGame(bool win)
     {
         ended = true;
@@ -150,7 +167,7 @@ public class GameManager : MonoBehaviour
         if (win && AudioManager.Instance) AudioManager.Instance.PlayWin();
 
         if (resultPanel) resultPanel.SetActive(true);
-        if (resultTitleText) resultTitleText.text = win ? "You Win!" : "Game Over";
-        if (finalScoreText) finalScoreText.text = $"Final Score: {score}";
+        //if (resultTitleText) resultTitleText.text = win ? "You Win!" : "Game Over";
+        //if (finalScoreText) finalScoreText.text = $"Final Score: {score}";
     }
 }
