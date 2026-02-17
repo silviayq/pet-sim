@@ -21,9 +21,9 @@ public class PetRuntime : MonoBehaviour
     public Sprite foodSprite;
     public Sprite waterSprite;
 
-    public Image bowlImage;
-    public Sprite fullSprite;
-    public Sprite emptySprite;
+    public Image tendImage;
+    public Sprite petSprite;
+    public Sprite trimSprite;
 
     public GameObject chickenParent;
     public GameObject plantParent;
@@ -36,19 +36,29 @@ public class PetRuntime : MonoBehaviour
     public Animator plantAnimator;
     private Animator animator;
 
-    [Header("Thinking UI (Image)")]
+    public Animator foodBowlAnimator;
+    private bool isChicken = false;
+
+    [Header("Thinking Bubble Variables")]
+    public GameObject thinkingBubble;
+    public Animator thinkingAnimator;
+    public Vector3 chickenThinkingPos;
+    public Vector3 plantThinkingPos;
+
+    [Header("Thinking UI Variables")]
     public Image thinkingImage;
     public Sprite thinkFoodSprite;
     public Sprite thinkWaterSprite;
     private Sprite thinkFeedSprite;
-    public Sprite thinkPlaySprite;
+    public Sprite thinkPetSprite;
+    public Sprite thinkTrimSprite;
+    private Sprite thinkPlaySprite;
     public Sprite thinkMusicSprite;
+    public Vector3 thinkFeedSize;
+    public Vector3 thinkTendSize;
+    public Vector3 thinkMusicSize;
 
-    [Header("Action Texts")]
-    public TextMeshProUGUI feedBtnText;
-    public TextMeshProUGUI playBtnText;
-
-    [Header("FX/Audio (optional)")]
+    [Header("FX/Audio")]
     public AudioSource chickenAudioSource;
     public AudioSource plantAudioSource;
     private AudioSource audioSource;
@@ -97,7 +107,6 @@ public class PetRuntime : MonoBehaviour
     public SpriteRenderer chickenRenderer;
     public SpriteRenderer plantRenderer;
     public Color wrongColor;
-
 
     private void Start()
     {
@@ -153,9 +162,15 @@ public class PetRuntime : MonoBehaviour
             audioSource = chickenAudioSource;
             feedImage.sprite = foodSprite;
             thinkFeedSprite = thinkFoodSprite;
+            tendImage.sprite = petSprite;
+            thinkPlaySprite = thinkPetSprite;
 
             petObject = chickenObject;
             petRenderer = chickenRenderer;
+
+            thinkingBubble.transform.localPosition = chickenThinkingPos;
+
+            isChicken = true;
         }
         else
         {
@@ -166,10 +181,16 @@ public class PetRuntime : MonoBehaviour
             audioSource = plantAudioSource;
             feedImage.sprite = waterSprite;
             thinkFeedSprite = thinkWaterSprite;
+            tendImage.sprite = trimSprite;
+            thinkPlaySprite = thinkTrimSprite;
 
 
             petObject = plantObject;
             petRenderer = plantRenderer;
+
+            thinkingBubble.transform.localPosition = plantThinkingPos;
+
+            isChicken = false;
         }
 
         if (stage == 2)
@@ -206,11 +227,19 @@ public class PetRuntime : MonoBehaviour
                 case 2: currentNeed = NeedType.Music; break;
             }
 
-            ShowThinking(currentNeed);
+            thinkingBubble.SetActive(true);
+            StartCoroutine(ThinkingSequence());
 
             if (timeoutCo != null) StopCoroutine(timeoutCo);
             timeoutCo = StartCoroutine(NeedTimeout());
         }
+    }
+
+    private IEnumerator ThinkingSequence()
+    {
+        thinkingAnimator.SetBool("Thinking", true);
+        yield return new WaitForSeconds(1f);
+        ShowThinking(currentNeed);
     }
 
     private IEnumerator NeedTimeout()
@@ -231,27 +260,26 @@ public class PetRuntime : MonoBehaviour
     private void ShowThinking(NeedType need)
     {
         if (!thinkingImage) return;
-
         thinkingImage.enabled = true;
         switch (need)
         {
-            case NeedType.Feed: thinkingImage.sprite = thinkFeedSprite; break;
-            case NeedType.Play: thinkingImage.sprite = thinkPlaySprite; break;
-            case NeedType.Music: thinkingImage.sprite = thinkMusicSprite; break;
+            case NeedType.Feed: thinkingImage.transform.localScale = thinkFeedSize; thinkingImage.sprite = thinkFeedSprite; break;
+            case NeedType.Play: thinkingImage.transform.localScale = thinkTendSize; thinkingImage.sprite = thinkPlaySprite; break;
+            case NeedType.Music: thinkingImage.transform.localScale = thinkMusicSize; thinkingImage.sprite = thinkMusicSprite; break;
         }
     }
 
     private void HideThinking()
     {
         if (!thinkingImage) return;
+        thinkingBubble.SetActive(false);
         thinkingImage.enabled = false;
         thinkingImage.sprite = null;
+        thinkingAnimator.SetBool("Thinking", false);
     }
 
     private int TrySatisfyNeed(NeedType action)
     {
-        //if (currentNeed == NeedType.None) return 0;
-
         if (currentNeed == action)
         {
             happiness = Mathf.Clamp(happiness + correctNeedHappinessGain, 0f, 100f);
@@ -267,6 +295,7 @@ public class PetRuntime : MonoBehaviour
         }
         else
         {
+            //Wrong animation
             Sequence wrong = DOTween.Sequence();
             wrong.Append(petRenderer.DOColor(wrongColor, 0));
             wrong.Append(petObject.transform.DOShakePosition(wrongDuration, shakePosIntensity, shakePosVibration, 90f, false, false));
@@ -297,7 +326,14 @@ public class PetRuntime : MonoBehaviour
         int gain = TrySatisfyNeed(NeedType.Feed);
         if (gain > 0)
         {
-            animator.SetTrigger("Feed");
+            if (isChicken)
+            {
+                foodBowlAnimator.SetTrigger("Feed");
+            }
+            else
+            {
+                animator.SetTrigger("Feed");
+            }
             if (audioSource && eatClip) audioSource.PlayOneShot(eatClip);
         }
         return gain;

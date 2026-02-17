@@ -9644,7 +9644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b7e89dbbaa16747b0c06ba83cf431a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm: {fileID: 8300000, guid: 483b006b2cb1b0d458f795e7a36181f0, type: 3}
+  bgm: {fileID: 8300000, guid: 2c7f493826a829f4b9e455fce6e3a32d, type: 3}
   click: {fileID: 8300000, guid: 83eb89a82414cc8488e214fba15ec8ee, type: 3}
   stageChange: {fileID: 8300000, guid: 414b8c783db7ec3418058201097b336a, type: 3}
   start: {fileID: 8300000, guid: 82aba964b507b264698ba6a2505bd5ad, type: 3}
